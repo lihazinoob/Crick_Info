@@ -1,139 +1,164 @@
 <!DOCTYPE html>
-   <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-      <!--=============== REMIXICONS ===============-->
-      <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
-
-      <!--=============== CSS ===============-->
-      <!-- <link rel="stylesheet" href="assets/css/styles.css"> -->
-      <link href="{{ asset('cssfiles/homepage.css') }}" rel="stylesheet" type="text/css">
-
-      <title>CrickInfo</title>
-   </head>
-   <body>
-      <!--=============== HEADER ===============-->
-      <header class="header">
-         <nav class="nav container">
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+   <!-- Connect the css file -->
+      <link rel="stylesheet" href="{{ asset('cssfiles/homepage.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRICKINFO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
             <div class="nav__data">
-               <a href="#" class="nav__logo">
-                  <i class="ri-planet-line"></i> CrickInfo
-               </a>
-               
-               <div class="nav__toggle" id="nav-toggle">
-                  <i class="ri-menu-line nav__burger"></i>
-                  <i class="ri-close-line nav__close"></i>
-               </div>
+                <a href="#" class="nav__logo">
+                   <i class="ri-planet-line"></i> CrickInfo
+                </a>
+              </div>
+              <div class="nav_items">
+                <a href="#">Iconic Moments</a>
+                <a href="#">Discover</a>
+                <a href="#">Teams</a>
+              </div>
+        </nav>
+    </header>
+
+    <!-- carousel -->
+    <div class="carousel">
+        <!-- list item -->
+        <div class="list">
+            <div class="item">
+               <!-- Add an image -->
+               <!-- <img src="{{ asset('image/Virat_Kohli.jpg') }}"> -->
+
+                <!-- <img src="image/Virat_Kohli.jpg"> -->
+                <div class="content">
+                    <div class="author">INDIA</div>
+                    <div class="title">GREAT</div>
+                    <div class="topic">VIRAT KOHLI</div>
+                    <div class="des">
+                        <!-- lorem 50 -->
+                        <!-- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium? -->
+                        Virat Kohli is in now in the Greatest of all time.    
+                    </div>
+                    <div class="buttons">
+                        <button>SEE MORE</button>
+                        <!-- <button>SUBSCRIBE</button> -->
+                    </div>
+                </div>
             </div>
-
-            <!--=============== NAV MENU ===============-->
-            <div class="nav__menu" id="nav-menu">
-               <ul class="nav__list">
-                  <li><a href="#" class="nav__link">Home</a></li>
-
-                  <li><a href="#" class="nav__link">Discover</a></li>
-
-                  <!--=============== DROPDOWN 1 ===============-->
-                  <li class="dropdown__item">
-                     <div class="nav__link">
-                        Teams <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-                     </div>
-
-                     <ul class="dropdown__menu">
-                        <li>
-                           <a href="#" class="dropdown__link">
-                               Bangladesh
-                           </a>                          
-                        </li>
-
-                        <li>
-                           <a href="#" class="dropdown__link">
-                               India
-                           </a>
-                        </li>
-
-                        <li>
-                           <a href="#" class="dropdown__link">
-                              Australia
-                           </a>
-                        </li>
-                        
-                        <li>
-                           <a href="#" class="dropdown__link">
-                               England
-                           </a>
-                        </li>
-                        
-                        <li>
-                           <a href="#" class="dropdown__link">
-                               Pakistan
-                           </a>
-                        </li>
-
-                        <li>
-                           <a href="#" class="dropdown__link">
-                               South Africa
-                           </a>
-                        </li>
-
-                        <li>
-                           <a href="#" class="dropdown__link">
-                               Sri Lanka
-                           </a>
-                        </li>      
-
-                        <li>
-                           <a href="#" class="dropdown__link">
-                               West Indies
-                           </a>
-                        </li>
-                        
-                        <li>
-                           <a href="#" class="dropdown__link">
-                               New Zealand
-                           </a>
-                        </li>
-                        
-                        <li>
-                           <a href="#" class="dropdown__link">
-                               Afghanistan
-                           </a>
-                        </li>
-
-
-
-
-
-                     </ul>
-                  </li>
-                  
-                  
-                  <!--=============== DROPDOWN 2 ===============-->
-                  <li class="dropdown__item">
-                     <div class="nav__link">
-                        Users <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-                     </div>
-
-                     <ul class="dropdown__menu">
-                        <li>
-                           <a href="#" class="dropdown__link">
-                              <i class="ri-user-line"></i> Profiles
-                           </a>                          
-                        </li>
-
-                        
-                     </ul>
-                  </li>
-
-                  
-               </ul>
+            <div class="item">
+                <img src="image/Virat_Kohli.jpg">
+                <div class="content">
+                    <div class="author">INDIA</div>
+                    <div class="title">GREAT</div>
+                    <div class="topic">VIRAT KOHLI</div>
+                    <div class="des">
+                        <!-- lorem 50 -->
+                        <!-- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium? -->
+                        Virat Kohli is in now in the Greatest of all time.    
+                    </div>
+                    <div class="buttons">
+                        <button>SEE MORE</button>
+                        <!-- <button>SUBSCRIBE</button> -->
+                    </div>
+                </div>
             </div>
-         </nav>
-      </header>
+            <div class="item">
+                <img src="image/Virat_Kohli.jpg">
+                <div class="content">
+                    <div class="author">INDIA</div>
+                    <div class="title">GREAT</div>
+                    <div class="topic">VIRAT KOHLI</div>
+                    <div class="des">
+                        <!-- lorem 50 -->
+                        <!-- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium? -->
+                        Virat Kohli is in now in the Greatest of all time.    
+                    </div>
+                    <div class="buttons">
+                        <button>SEE MORE</button>
+                        <!-- <button>SUBSCRIBE</button> -->
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="image/Virat_Kohli.jpg">
+                <div class="content">
+                    <div class="author">INDIA</div>
+                    <div class="title">GREAT</div>
+                    <div class="topic">VIRAT KOHLI</div>
+                    <div class="des">
+                        <!-- lorem 50 -->
+                        <!-- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium? -->
+                        Virat Kohli is in now in the Greatest of all time.    
+                    </div>
+                    <div class="buttons">
+                        <button>SEE MORE</button>
+                        <!-- <button>SUBSCRIBE</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- list thumnail -->
+        <div class="thumbnail">
+            <div class="item">
+                <img src="image/Virat_Kohli.jpg">
+                <div class="content">
+                    <div class="title">
+                        GREAT
+                    </div>
+                    <div class="description">
+                        VIRAT KOHLI
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="image/Virat_Kohli.jpg">
+                <div class="content">
+                    <div class="title">
+                        GREAT
+                    </div>
+                    <div class="description">
+                        VIRAT KOHLI
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="image/Virat_Kohli.jpg">
+                <div class="content">
+                    <div class="title">
+                        GREAT
+                    </div>
+                    <div class="description">
+                        VIRAT KOHLI
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="image/Virat_Kohli.jpg">
+                <div class="content">
+                    <div class="title">
+                        GREAT
+                    </div>
+                    <div class="description">
+                        VIRAT KOHLI
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- next prev -->
 
-      <!--=============== MAIN JS ===============-->
-      <!-- <script src="assets/js/main.js"></script> -->
-   </body>
+        <div class="arrows">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+        <!-- time running -->
+        <div class="time"></div>
+    </div>
+   <!-- Link the JS file -->
+      <script src="{{ asset('jsfiles/homepage.js') }}"></script>
+    <!-- <script src="app.js"></script> -->
+</body>
 </html>

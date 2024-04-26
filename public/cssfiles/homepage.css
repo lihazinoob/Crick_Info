@@ -1,335 +1,338 @@
-/*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
-
-/*=============== VARIABLES CSS ===============*/
-:root {
-  --header-height: 3.5rem;
-
-  /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
-  --black-color: hsl(220, 24%, 12%);
-  --black-color-light: hsl(220, 24%, 15%);
-  --black-color-lighten: hsl(220, 20%, 18%);
-  --white-color: #fff;
-  --body-color: hsl(220, 100%, 97%);
-
-  /*========== Font and typography ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: "Montserrat", sans-serif;
-  --normal-font-size: .938rem;
-
-  /*========== Font weight ==========*/
-  --font-regular: 400;
-  --font-semi-bold: 600;
-
-  /*========== z index ==========*/
-  --z-tooltip: 10;
-  --z-fixed: 100;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+    margin: 0;
+    background-color: #000;
+    color: #eee;
+    font-family: Poppins;
+    font-size: 18px;
 }
-
-/*========== Responsive typography ==========*/
-@media screen and (min-width: 1024px) {
-  :root {
-    --normal-font-size: 1rem;
-  }
-}
-
-/*=============== BASE ===============*/
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-body {
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-  background-color: var(--body-color);
-}
-
-ul {
-  list-style: none;
-  /* Color highlighting when pressed on mobile devices */
-  /*-webkit-tap-highlight-color: transparent;*/
-}
-
-a {
-  text-decoration: none;
-}
-
-/*=============== REUSABLE CSS CLASSES ===============*/
-.container {
-  max-width: 1120px;
-  margin-inline: 1.5rem;
-}
-
-/*=============== HEADER ===============*/
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: var(--black-color);
-  box-shadow: 0 2px 16px hsla(220, 32%, 8%, .3);
-  z-index: var(--z-fixed);
-}
-
-/*=============== NAV ===============*/
-.nav {
-  height: var(--header-height);
-}
-
-.nav__logo, 
-.nav__burger, 
-.nav__close {
-  color: var(--white-color);
-}
-
-.nav__data {
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav__logo {
-  display: inline-flex;
-  align-items: center;
-  column-gap: .25rem;
-  font-weight: var(--font-semi-bold);
-  /* Color highlighting when pressed on mobile devices */
-  /*-webkit-tap-highlight-color: transparent;*/
-}
-
-.nav__logo i {
-  font-weight: initial;
-  font-size: 1.25rem;
-}
-
-.nav__toggle {
-  position: relative;
-  width: 32px;
-  height: 32px;
-}
-
-.nav__burger, 
-.nav__close {
-  position: absolute;
-  width: max-content;
-  height: max-content;
-  inset: 0;
-  margin: auto;
-  font-size: 1.25rem;
-  cursor: pointer;
-  transition: opacity .1s, transform .4s;
-}
-
-.nav__close {
-  opacity: 0;
-}
-
-/* Navigation for mobile devices */
-@media screen and (max-width: 1118px) {
-  .nav__menu {
-    position: absolute;
-    left: 0;
-    top: 2.5rem;
-    width: 100%;
-    height: calc(100vh - 3.5rem);
-    overflow: auto;
-    pointer-events: none;
-    opacity: 0;
-    transition: top .4s, opacity .3s;
-  }
-  .nav__menu::-webkit-scrollbar {
-    width: 0;
-  }
-  .nav__list {
-    background-color: var(--black-color);
-    padding-top: 1rem;
-  }
-}
-
-.nav__link {
-  color: var(--white-color);
-  background-color: var(--black-color);
-  font-weight: var(--font-semi-bold);
-  padding: 1.25rem 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: background-color .3s;
-}
-
-.nav__link:hover {
-  background-color: var(--black-color-light);
-}
-
-/* Show menu */
-.show-menu {
-  opacity: 1;
-  top: 3.5rem;
-  pointer-events: initial;
-}
-
-/* Show icon */
-.show-icon .nav__burger {
-  opacity: 0;
-  transform: rotate(90deg);
-}
-.show-icon .nav__close {
-  opacity: 1;
-  transform: rotate(90deg);
-}
-
-/*=============== DROPDOWN ===============*/
-.dropdown__item {
-  cursor: pointer;
-}
-
-.dropdown__arrow {
-  font-size: 1.25rem;
-  font-weight: initial;
-  transition: transform .4s;
-}
-
-.dropdown__link, 
-.dropdown__sublink {
-  padding: 1.25rem 1.25rem 1.25rem 2.5rem;
-  color: var(--white-color);
-  background-color: var(--black-color-light);
-  display: flex;
-  align-items: center;
-  column-gap: .5rem;
-  font-weight: var(--font-semi-bold);
-  transition: background-color .3s;
-}
-
-.dropdown__link i, 
-.dropdown__sublink i {
-  font-size: 1.25rem;
-  font-weight: initial;
-}
-
-.dropdown__link:hover, 
-.dropdown__sublink:hover {
-  background-color: var(--black-color);
-}
-
-.dropdown__menu, 
-.dropdown__submenu {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height .4s ease-out;
-}
-
-/* Show dropdown menu & submenu */
-.dropdown__item:hover .dropdown__menu, 
-.dropdown__subitem:hover > .dropdown__submenu {
-  max-height: 1000px;
-  transition: max-height .4s ease-in;
-}
-
-/* Rotate dropdown icon */
-.dropdown__item:hover .dropdown__arrow {
-  transform: rotate(180deg);
-}
-
-/*=============== DROPDOWN SUBMENU ===============*/
-.dropdown__add {
-  margin-left: auto;
-}
-
-.dropdown__sublink {
-  background-color: var(--black-color-lighten);
-}
-
-/*=============== BREAKPOINTS ===============*/
-/* For small devices */
-@media screen and (max-width: 340px) {
-  .container {
-    margin-inline: 1rem;
-  }
-
-  .nav__link {
-    padding-inline: 1rem;
-  }
-}
-
-/* For large devices */
-@media screen and (min-width: 1118px) {
-  .container {
-    margin-inline: auto;
-  }
-
-  .nav {
-    height: calc(var(--header-height) + 2rem);
+nav {
+    height: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    
   }
-  .nav__toggle {
-    display: none;
-  }
-  .nav__list {
-    height: 100%;
+
+header a{
+    color: #eee;
+    margin-right: 40px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: .2s ease-in-out;
+    z-index: 1;
+}
+
+header a:hover{
+    color: #f1683a;
+    font-size: 1.5em;
+    z-index: 100;
+}   
+
+header{
+    width: 1140px;
+    max-width: 80%;
+    margin: auto;
+    height: 50px;
     display: flex;
-    column-gap: 3rem;
-  }
-  .nav__link {
-    height: 100%;
-    padding: 0;
-    justify-content: initial;
-    column-gap: .25rem;
-  }
-  .nav__link:hover {
-    background-color: transparent;
-  }
-
-  .dropdown__item, 
-  .dropdown__subitem {
+    align-items: center;
+    justify-content: space-between ;
     position: relative;
-  }
-
-  .dropdown__menu, 
-  .dropdown__submenu {
-    max-height: initial;
-    overflow: initial;
+    z-index: 100;
+}
+header a{
+    color: #eee;
+    margin-right: 40px;
+}
+/* carousel */
+.carousel{
+    height: 100vh;
+    margin-top: -50px;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+.carousel .list .item{
+    width: 100%;
+    height: 100%;
     position: absolute;
-    left: 0;
-    top: 6rem;
+    inset: 0 0 0 0;
+}
+.carousel .list .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.carousel .list .item .content{
+    position: absolute;
+    top: 20%;
+    width: 1140px;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 0 5px 10px #0004;
+}
+.carousel .list .item .author{
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+.carousel .list .item .title,
+.carousel .list .item .topic{
+    font-size: 5em;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+.carousel .list .item .topic{
+    color: #f1683a;
+}
+.carousel .list .item .buttons{
+    display: grid;
+    grid-template-columns: repeat(2, 130px);
+    grid-template-rows: 40px;
+    gap: 5px;
+    margin-top: 20px;
+}
+.carousel .list .item .buttons button{
+    border: none;
+    background-color: #eee;
+    letter-spacing: 3px;
+    font-family: Poppins;
+    font-weight: 500;
+    transition: .5s ease-in-out;
+}
+.carousel .list .item .buttons button:hover{
+    background-color: #f1683a;
+    color: #fff;
+    cursor: pointer;
+    
+}
+
+
+/* .carousel .list .item .buttons button:nth-child(2){
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #eee;
+} */
+/* thumbail */
+.thumbnail{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+}
+.thumbnail .item{
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+}
+.thumbnail .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.thumbnail .item .content{
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+.thumbnail .item .content .title{
+    font-weight: 500;
+}
+.thumbnail .item .content .description{
+    font-weight: 300;
+}
+/* arrows */
+.arrows{
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.arrows button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #eee4;
+    border: none;
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .5s;
+}
+.arrows button:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+/* animation */
+.carousel .list .item:nth-child(1){
+    z-index: 1;
+}
+
+/* animation text in first item */
+
+.carousel .list .item:nth-child(1) .content .author,
+.carousel .list .item:nth-child(1) .content .title,
+.carousel .list .item:nth-child(1) .content .topic,
+.carousel .list .item:nth-child(1) .content .des,
+.carousel .list .item:nth-child(1) .content .buttons
+{
+    transform: translateY(50px);
+    filter: blur(20px);
     opacity: 0;
-    pointer-events: none;
-    transition: opacity .3s, top .3s;
-  }
-
-  .dropdown__link, 
-  .dropdown__sublink {
-    padding-inline: 1rem 3.5rem;
-  }
-
-  .dropdown__subitem .dropdown__link {
-    padding-inline: 1rem;
-  }
-
-  .dropdown__submenu {
+    animation: showContent .5s 1s linear 1 forwards;
+}
+@keyframes showContent{
+    to{
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+.carousel .list .item:nth-child(1) .content .title{
+    animation-delay: 1.2s!important;
+}
+.carousel .list .item:nth-child(1) .content .topic{
+    animation-delay: 1.4s!important;
+}
+.carousel .list .item:nth-child(1) .content .des{
+    animation-delay: 1.6s!important;
+}
+.carousel .list .item:nth-child(1) .content .buttons{
+    animation-delay: 1.8s!important;
+}
+/* create animation when next click */
+.carousel.next .list .item:nth-child(1) img{
+    width: 150px;
+    height: 220px;
     position: absolute;
-    left: 100%;
-    top: .5rem;
-  }
+    bottom: 50px;
+    left: 50%;
+    border-radius: 30px;
+    animation: showImage .5s linear 1 forwards;
+}
+@keyframes showImage{
+    to{
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
 
-  /* Show dropdown menu */
-  .dropdown__item:hover .dropdown__menu {
-    opacity: 1;
-    top: 5.5rem;
-    pointer-events: initial;
-    transition: top .3s;
-  }
+.carousel.next .thumbnail .item:nth-last-child(1){
+    overflow: hidden;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+.carousel.prev .list .item img{
+    z-index: 100;
+}
+@keyframes showThumbnail{
+    from{
+        width: 0;
+        opacity: 0;
+    }
+}
+.carousel.next .thumbnail{
+    animation: effectNext .5s linear 1 forwards;
+}
 
-  /* Show dropdown submenu */
-  .dropdown__subitem:hover > .dropdown__submenu {
-    opacity: 1;
+@keyframes effectNext{
+    from{
+        transform: translateX(150px);
+    }
+}
+
+/* running time */
+
+.carousel .time{
+    position: absolute;
+    z-index: 1000;
+    width: 0%;
+    height: 3px;
+    background-color: #f1683a;
+    left: 0;
     top: 0;
-    pointer-events: initial;
-    transition: top .3s;
-  }
+}
+
+.carousel.next .time,
+.carousel.prev .time{
+    animation: runningTime 3s linear 1 forwards;
+}
+@keyframes runningTime{
+    from{ width: 100%}
+    to{width: 0}
+}
+
+
+/* prev click */
+
+.carousel.prev .list .item:nth-child(2){
+    z-index: 2;
+}
+
+.carousel.prev .list .item:nth-child(2) img{
+    animation: outFrame 0.5s linear 1 forwards;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+@keyframes outFrame{
+    to{
+        width: 150px;
+        height: 220px;
+        bottom: 50px;
+        left: 50%;
+        border-radius: 20px;
+    }
+}
+
+.carousel.prev .thumbnail .item:nth-child(1){
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+.carousel.next .arrows button,
+.carousel.prev .arrows button{
+    pointer-events: none;
+}
+.carousel.prev .list .item:nth-child(2) .content .author,
+.carousel.prev .list .item:nth-child(2) .content .title,
+.carousel.prev .list .item:nth-child(2) .content .topic,
+.carousel.prev .list .item:nth-child(2) .content .des,
+.carousel.prev .list .item:nth-child(2) .content .buttons
+{
+    animation: contentOut 1.5s linear 1 forwards!important;
+}
+
+@keyframes contentOut{
+    to{
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+@media screen and (max-width: 678px) {
+    .carousel .list .item .content{
+        padding-right: 0;
+    }
+    .carousel .list .item .content .title{
+        font-size: 30px;
+    }
 }
