@@ -16,35 +16,35 @@
         <form action="submit.php" method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="image">Image:</label>
-                <input type="file" id="image" name="image" accept="image/*" required>
+                <input type="file" id="image" name="image" accept="image/*" required value="{{old('image')}}">
                 @if($errors->has('image'))
                     <p>{{ $errors->first('image') }}</p>
                 @endif    
             </div>
             <div class="form-group">
                 <label for="author">Author:</label>
-                <input type="text" id="author" name="author" required>
+                <input type="text" id="author" name="author" required value="{{old('description')}}">
                 @if ($errors->has('author'))
                     <p>{{ $errors->first('author') }}</p>
                 @endif
             </div>
             <div class="form-group">
                 <label for="title">Title:</label>
-                <input type="text" id="title" name="title" required>
+                <input type="text" id="title" name="title" required value ="{{old("title")}}">
                 @if ($errors->has('title'))
                     <p>{{ $errors->first('title') }}</p>
                 @endif
             </div>
             <div class="form-group">
                 <label for="topic">Topic:</label>
-                <input type="text" id="topic" name="topic" required>
+                <input type="text" id="topic" name="topic" required value ="{{old("topic")}}">
                 @if ($errors->has('topic'))
                     <p>{{ $errors->first('topic') }}</p>
                 @endif
             </div>
             <div class="form-group">
                 <label for="description">Description:</label>
-                <textarea id="description" name="description" rows="5" required></textarea>
+                <textarea id="description" name="description" rows="5" required value ="{{old("description")}}"></textarea>
                 @if ($errors->has('description'))
                     <p>{{ $errors->first('description') }}</p>  
                 @endif
