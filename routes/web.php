@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\iconicmomentsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,8 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('homepage');
+// Route::get('/', function () {
+//     return view('homepage');
+// });
+
+Route::get('/',[iconicmomentsController::class,'showtheiconicmoments'] );
+Route::get('/create', function () {
+    return view('createiconicmoments');
 });
 
-// Route
+Route::post('/store', [iconicmomentsController::class,'store'] );

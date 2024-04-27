@@ -100,6 +100,23 @@
                     </div>
                 </div>
             </div>
+            <div class="item">
+                <img src="image/Dhoni&Kohli.jpg">
+                <div class="content">
+                    <div class="author">INDIA</div>
+                    <div class="title">GREAT</div>
+                    <div class="topic">VIRAT KOHLI</div>
+                    <div class="des">
+                        <!-- lorem 50 -->
+                        <!-- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium? -->
+                        Virat Kohli is in now in the Greatest of all time.    
+                    </div>
+                    <div class="buttons">
+                        <button>SEE MORE</button>
+                        <!-- <button>SUBSCRIBE</button> -->
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- list thumnail -->
         <div class="thumbnail">
@@ -127,6 +144,17 @@
             </div>
             <div class="item">
                 <img src="image/Virat_Kohli.jpg">
+                <div class="content">
+                    <div class="title">
+                        GREAT
+                    </div>
+                    <div class="description">
+                        VIRAT KOHLI
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="image/Dhoni&Kohli.jpg">
                 <div class="content">
                     <div class="title">
                         GREAT
