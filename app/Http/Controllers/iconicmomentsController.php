@@ -13,6 +13,18 @@ class iconicmomentsController extends Controller
     }
     public function store(Request $request)
     {
+        // validate the request
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+            'author' => 'required',
+            'title' => 'required',
+            'topic' => 'required',
+            'description' => 'required',
+        ]);
+
+
+
+
         // dd ($request->all());
         $imagename = time().'.'.$request->image->extension();
         $request->image->move(public_path('iconicmoments'),$imagename);
