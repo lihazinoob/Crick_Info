@@ -9,7 +9,9 @@ class iconicmomentsController extends Controller
 {
     public function showtheiconicmoments()
     {
-        return view('homepage');
+        $iconicmoments = iconicmoments::get();
+        //  dd($iconicmoments ->all());
+        return view('homepage',['iconicmoments'=>$iconicmoments]);
     }
     public function store(Request $request)
     {
