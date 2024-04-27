@@ -11,10 +11,58 @@
 
 body{
   height: 100vh;
+  /* display: flex;
+  align-items: center;
+  justify-content:space-evenly; */
+  background-color: white; 
+  
+}
+nav {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+header a{
+  color:black;
+  margin-right: 40px;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: .2s ease-in-out;
+  z-index: 1;
+}
+
+header a:hover{
+  color: #f1683a;
+  font-size: 1.5em;
+  z-index: 100;
+}   
+
+header{
+  width: 1140px;
+  max-width: 80%;
+  margin: auto;
+  height: 50px;
   display: flex;
   align-items: center;
-  justify-content:space-evenly;
-  background-color: white; 
+  justify-content: space-between ;
+  position: relative;
+  z-index: 100;
+}
+header a{
+  color:black;
+  margin-right: 40px;
+}
+
+.items{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 10em;
+  align-items: center;
   
 }
 
