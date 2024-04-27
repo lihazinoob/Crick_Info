@@ -1,0 +1,110 @@
+/* Google fonts import Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content:space-evenly;
+  background-color: white; 
+  
+}
+
+
+
+.image{
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius:  50%;
+  background-color: black;
+  padding: 2.5px;
+  
+}
+.profile-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 370px;
+  width: 100%;
+  background: white;
+  /* box-shadow: ; */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+  /* margin: 20px 20px; */
+  border-radius: 24px;
+  padding: 25px;
+}
+
+.image .profile-img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2.5px solid white;
+}
+
+.profile-card .text-data{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-data .name{
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.text-data .destination{
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.text-data .tag-line{
+  font-size: 30px;
+  font-weight: 700;
+  color: #656e72;
+  z-index: .1;
+
+}
+.text-data .tag-line:hover{
+  color: black;
+  z-index: 1;
+}
+
+.profile-card .social-icons {
+  display: flex;
+  justify-content: center;
+  /* margin-top: 20px; */
+  margin-top: 15px;
+}
+
+.profile-card .social-icons .icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   color: #fff; 
+  font-size: 18 px;
+
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  background-color: black;
+  margin: 0 8px;
+  text-decoration: none;
+  z-index: .1;
+}
+
+.profile-card .social-icons .icon:hover{
+  background-color: #f4f4f4;
+  color: black;
+  border: 2px solid black;
+  z-index: 1;
+}
