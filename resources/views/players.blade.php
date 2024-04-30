@@ -31,13 +31,14 @@
   </header>
 
   <div class="card">
+    @foreach($players as $player)
     <div class="nft">
       <div class='main'>
       <!-- Connect the image through asset-->
       
-      <img class='tokenImage' src="image/Virat_Kohli.jpg" alt="NFT" />
-        <h2>Virat Kohli</h2>
-        <p class='description'>INDIA</p>
+      <img class='tokenImage' src="{{ asset('playersinfo/'.$player->image) }}" alt="NFT" />
+        <h2>{{$player->full_name}}</h2>
+        <p class='description'>{{$player->country}}</p>
 
         <hr />
         <div class="buttons">
@@ -45,36 +46,10 @@
         </div>
       </div>
     </div>
+    @endforeach
+    
 
-    <div class="nft">
-      <div class='main'>
-      <!-- Connect the image through asset-->
-      
-      <img class='tokenImage' src="image/Virat_Kohli.jpg" alt="NFT" />
-        <h2>Virat Kohli</h2>
-        <p class='description'>INDIA</p>
-
-        <hr />
-        <div class="buttons">
-          <button>SEE MORE</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="nft">
-      <div class='main'>
-      <!-- Connect the image through asset-->
-      
-      <img class='tokenImage' src="image/Virat_Kohli.jpg" alt="NFT" />
-        <h2>Virat Kohli</h2>
-        <p class='description'>INDIA</p>
-
-        <hr />
-        <div class="buttons">
-          <button>SEE MORE</button>
-        </div>
-      </div>
-    </div>
+    
   </div>
 
 

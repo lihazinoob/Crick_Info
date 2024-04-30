@@ -10,7 +10,10 @@ class createplayerController extends Controller
     
     public function showtheplayersinuserpanel()
     {
-        return view('players');
+        // return view('players');
+        $players = playerinfo::get();
+        // dd($players->all());
+        return view('players',['players'=>$players]);
     }
 
     public function storetheplayersinadminpanel(Request $request)
