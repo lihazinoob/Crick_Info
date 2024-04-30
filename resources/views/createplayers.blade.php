@@ -17,9 +17,9 @@
       @csrf
       <div class="input-group">
         <label for="player-image">Player Image:</label>
-        <input type="file" id="player-image" name="player-image" accept="image/*" required value="{{old('image')}}">
-        @if ($errors->has('player-image'))
-        <p>{{ $errors->first('player-image') }}</p>
+        <input type="file" id="image" name="image" accept="image/*" required value="{{old('image')}}">
+        @if ($errors->has('image'))
+        <p>{{ $errors->first('image') }}</p>
         @endif
       </div>
       <div class="input-group">
@@ -45,7 +45,7 @@
         <input type="text" id="bowling-style" name="bowling-style" placeholder="e.g., Right-arm, Left-arm" value="{{old('bowling-style')}}">
       </div>
       <div class="input-group">
-        <label for="country">Playing Role:</label>
+        <label for="playing-role">Playing Role:</label>
         <input type="text" id="playing-role" name="playing-role" required value="{{old('playing-role')}}">
         @if ($errors->has('playing-role'))
         <p>{{ $errors->first('playing-role') }}</p>

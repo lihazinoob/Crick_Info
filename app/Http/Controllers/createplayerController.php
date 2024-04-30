@@ -15,28 +15,27 @@ class createplayerController extends Controller
 
     public function storetheplayersinadminpanel(Request $request)
     {
-        // validate the request
-        // $request->validate([
-        //     'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
-        //     'full_name' => 'required',
-        //     'birth_date' => 'required',
-        //     'playing_role' => 'required',
-        //     'country' => 'required',
-        // ]);
-
-        dd ($request->all());
-        // $imagename = time().'.'.$request->image->extension();
-        // $request->image->move(public_path('playerinfos'),$imagename);
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+            'full-name' => 'required',
+            'birth-date' => 'required',
+            'playing-role' => 'required',
+            'country' => 'required',
+        ]);
+        // dd($request->all());
+        $imagename = time().'.'.$request->image->extension();
+        $request->image->move(public_path('playersinfo'),$imagename);
         // dd($imagename);
+        // Add the info to database
+        $playerinfo = new playerinfo();
+        $playerinfo->image = $imagename;
+        $playerinfo->full_name = $request->input('full-name');
+        $playerinfo->birth_date = $request->input('birth-date');
+        $playerinfo->batting_style = $request->input('batting-style');
+        $playerinfo->bowling_style = $request->input('bowling-style');
+        $playerinfo->playing_role = $request->input('playing-role');
+        $playerinfo->country = $request->input('country');
+        $playerinfo->save();
 
-        // Add the image to database
-       
-        // $playerinfos = new playerinfo();
-        // $playerinfos->image = $imagename;
-        // $playerinfos->full_name = $request->full_name;
-        // $playerinfos->birth_date = $request->birth_date;
-        // $playerinfos->playing_role = $request->playing_role;
-        // $playerinfos->country = $request->country;
-        // $playerinfos->save();
     }
 }
