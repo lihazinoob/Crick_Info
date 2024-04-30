@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\createplayerController;
 use App\Http\Controllers\iconicmomentsController;
 use App\Http\Controllers\MainController;
 use Illuminate\Support\Facades\Route;
@@ -23,9 +24,21 @@ Route::get('/',[iconicmomentsController::class,'showtheiconicmoments'] );
 Route::get('/create', function () {
     return view('createiconicmoments');
 });
+// For the creation of players in admin panel.
+Route::get('/createplayers', function () {
+    return view('createplayers');
+});
+
+// to show the list of players in admin panel.
+
 
 Route::post('/store', [iconicmomentsController::class,'store'] );
 
 Route::get('/discover',[MainController::class,'discovergenre']);
 
-Route::get('/players',[MainController::class,'players']);
+Route::get('/players',[createplayerController::class,'showtheplayersinuserpanel']);
+
+Route::post('/listofplayers',[createplayerController::class,'storetheplayersinadminpanel'] );
+
+
+// Route::get('/players',[MainController::class,'players']);
