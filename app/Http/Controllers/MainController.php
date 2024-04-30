@@ -10,4 +10,8 @@ class MainController extends Controller
     {
         return view('discover');
     }
+    public function players()
+    {
+        return view('players');
+    }
 }

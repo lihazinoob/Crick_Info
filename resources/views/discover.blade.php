@@ -24,7 +24,7 @@
         </a>
       </div>
       <div class="nav_items">
-        <a href="#">Iconic Moments</a>
+        <a href="{{url('/')}}">Iconic Moments</a>
         <a href="{{url('/discover')}}">Discover</a>
         <a href="#">Teams</a>
       </div>

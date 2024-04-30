@@ -27,3 +27,5 @@ Route::get('/create', function () {
 Route::post('/store', [iconicmomentsController::class,'store'] );
 
 Route::get('/discover',[MainController::class,'discovergenre']);
+
+Route::get('/players',[MainController::class,'players']);
