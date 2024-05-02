@@ -1,49 +1,417 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
 }
-body{
-  background-color: black;
+
+/* Defining the variable that will  be used everywhere */
+
+:root{
+  --bg-color:rgb(15,15,15);
+  --second-bg-color:#161616;
+  --text-color:white;
+  --main-color:orange;
+}
+html{
+  font-size:62.5%;
+  overflow-x: hidden;
 }
 
-nav {
+body{
+  background: var(--bg-color);
+  color: var(--text-color);
+}
 
-  height: 100%;
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding:3rem 9%;
+  background: rgba(0,0,0,.7);
+  backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 100;
+}
+
+.logo{
+  font-size: 3rem;
+  color: var(--text-color);
+  font-weight: 800;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+
+.logo:hover{
+  color: var(--main-color);
+  transform:scale(1.1);
+}
+
+.navbar a{
+  font-size: 1.8rem;
+  color: white;
+  margin-left: 4rem;
+  font-weight: 500;
+  transition: .3s ease-in-out;
+  border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover, .navbar a.active{
+  color: var(--main-color);
+  border-bottom: 3px solid var(--main-color);
   
 }
 
-header a{
-  color:white;
-  margin-right: 40px;
-  text-decoration: none;
-  font-size: 1.2em;
-  transition: .2s ease-in-out;
-  z-index: 1;
+
+#menu-icon{
+  font-size: 3rem;
+  color:var(--main-color);
+  display: none;
+  cursor: pointer;
 }
 
-header a:hover{
-  color: #f1683a;
-  font-size: 1.5em;
-  z-index: 100;
-}   
+section{
+  min-height: 100vh;
+  padding: 10rem 9% 10rem;
+}
 
-header{
-  width: 1140px;
-  max-width: 80%;
-  margin: auto;
-  height: 50px;
+.home{
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between ;
+  gap: 8rem;
+}
+
+span{
+  color: var(--main-color);
+}
+
+.logo span{
+  color: var(--main-color);
+}
+
+.home-content h1{
+  font-size: 8rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.home-img{
+  border-radius: 50%;
+  /* background: red; */
+}
+.home-img img{
   position: relative;
-  z-index: 100;
+  border-radius: 50%;
+  width: 32vw;
+  height: 32vw;
+  object-fit: cover;
+  box-shadow: 0 0 25px var(--main-color);
+  cursor : pointer;
+  transition: .4s ease-in-out;
+}
+
+.home-img img:hover{
+  transform: scale(1.1);
+  box-shadow:  0 0 50px var(--main-color), 
+               0 0 100px var(--main-color);
+}
+
+.home-content p{
+  font-size : 1.8rem;
+  font-weight: 500;
+}
+
+.social-icons a{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background: transparent;
+  border:0.2rem solid var(--main-color);
+  font-size: 2rem;
+  border-radius:50%;
+  color: var(--main-color);
+  margin: 3rem 1.5rem 3rem 0;
+  transition: .3s ease-in-out;
+}
+
+.social-icons a:hover{
+  color:white;  
+  transform: scale(1.1)translateY(-5px);
+  background-color: var(--main-color);
+  box-shadow: 0 0 25px var(--main-color);
+}
+
+.text-animation{
+  font-size: 42px;
+  font-weight: 600;
+  min-width: 280px;
+  margin:10px 0;
+}
+
+.text-animation span{
+  position: relative;
+}
+
+.text-animation span::before{
+  content: "Web Developer";
+  color: var(--main-color);
+  animation: words 20s infinite;
   
 }
-header a{
-  color:white;
-  margin-right: 40px;
+.text-animation span::after{
+  content:"";
+  background-color: var(--bg-color);
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  border-left: 3px solid var(--bg-color);
+  right: -8px;
+  animation: cursor .6s infinite,typing 20s steps(14) infinite;
 }
+
+@keyframes cursor{
+  to{
+    border-left: 2px solid var(--main-color);
+  }
+}
+
+@keyframes words{
+  0%,
+  20%{
+    content: "Web Developer";
+  }
+  21%,
+  40%{
+    content: "UI/UX Designer";
+  }
+  41%,
+  60%{
+    content: "Freelancer";
+  }
+  61%,
+  80%{
+    content: "Photographer";
+  }
+  81%,
+  100%{
+    content: "Graphic Designer";
+  }
+}
+
+@keyframes typing{
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95%{
+    width:0;
+  }
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85%
+  {
+    width:calc(100% + 8px);
+  }
+
+}
+/* Design of the about section */
+
+.about{
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  gap: 8rem;
+}
+.about .profile-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 420px;
+  width: 100%;
+  height: 100%;
+  background: var(--second-bg-color);
+  /* box-shadow: ; */
+  box-shadow: 0 0 25px var(--main-color);
+  /* margin: 20px 20px; */
+  border-radius: 24px;
+  padding: 25px;
+  transition: .4s ease-in-out;
+}
+
+.about .profile-card:hover{
+  transform: scale(1.1);
+  box-shadow:  0 0 50px var(--main-color), 
+               0 0 100px var(--main-color);
+  cursor: pointer;             
+}
+
+.about .image{
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius:  50%;
+  background-color: var(--main-color);
+  padding: 2.5px;
+  
+}
+
+.image .profile-img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  /* border: 2.5px solid white; */
+}
+
+.about .profile-card .text-data{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.text-data .name{
+  font-size: 24px;
+  font-weight: 500;
+  color: white;
+}
+
+.text-data .destination{
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+.text-data .tag-line{
+  font-size: 30px;
+  font-weight: 700;
+  /* color: #656e72; */
+  z-index: .1;
+}
+
+.timeline-section{
+  background: var(--second-bg-color);
+  padding: 100px 15px;
+}
+.timeline-section h2{
+  margin-bottom: 5rem;
+  font-size: 5rem;
+  justify-content: center;
+  padding-left: 41%;
+  /* position: relative; */
+}
+
+.timeline-items{
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.timeline-items::before{
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background: var(--main-color);
+  left: calc(50% - 1px);
+  /* transform: translateX(-50%); */
+}
+
+.timeline-item{
+  margin-bottom:40px;
+  width: 100%;
+  position: relative;
+}
+
+.timeline-item:last-child{
+  margin-bottom: 0;
+}
+.timeline-item:nth-child(odd){
+  padding-right: calc(50%+30px);
+  text-align:right;
+}
+
+
+
+
+
+.timeline-item:nth-child(even)
+{
+  padding-left: calc(50%+30px);
+  text-align: left;
+}
+
+.timeline-dot{
+  height:21px;
+  width: 21px;
+  background: var(--main-color);
+  box-shadow: 0 0 25px var(--main-color);
+  position: absolute;
+  left: calc(50% - 8px);
+  border-radius: 50%;
+  top: 10px;
+
+}
+
+.timeline-date{
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-color);
+  margin: 6px 0 15px;
+}
+
+.timeline-content{
+  background-color: var(--second-bg-color);
+  backdrop-filter: blur(20px);
+  border: 2px solid var(--main-color);
+  box-shadow: 0 0 10px var(--main-color);
+  padding: 30px; 
+  border-radius: 1em;
+  cursor: pointer;
+  transition: .4s ease-in-out;
+}
+
+.timeline-content:hover{
+  transform: scale(1.1);
+  box-shadow: 0 0 25px var(--main-color);
+}
+
+.timeline-content h3{
+  font-size: 20px;
+  color: var(--main-color);
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.timeline-content p{
+  color: white;
+  opacity: 0.8;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
