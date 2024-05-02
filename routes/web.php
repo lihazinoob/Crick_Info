@@ -40,5 +40,6 @@ Route::get('/players',[createplayerController::class,'showtheplayersinuserpanel'
 
 Route::post('/listofplayers',[createplayerController::class,'storetheplayersinadminpanel'] );
 
+Route::get('/particularplayer',[MainController::class,'showparticularplayer'] );
 
 // Route::get('/players',[MainController::class,'players']);

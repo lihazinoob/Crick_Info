@@ -14,4 +14,8 @@ class MainController extends Controller
     {
         return view('players');
     }
+    public function showparticularplayer()
+    {
+        return view('particularplayer');
+    }
 }
