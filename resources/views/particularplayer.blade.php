@@ -14,7 +14,7 @@
   </head>
   <body>
     <header class="header">
-      <a href="#home" class="logo"> Naveed <span>Lihazi</span> </a>
+      <a href="#home" class="logo"><span>{{$player->full_name}}</span> </a>
       <i class="fa-solid fa-bars" id="menu-icon"></i>
 
       <nav class="navbar">
@@ -28,7 +28,7 @@
     <!-- Home Section -->
     <section class="home" id="home">
       <div class="home-content">
-        <h1>Hi, It's <span>Naveed</span></h1>
+        <h1><span>{{$player->full_name}}</span></h1>
 
         <h3 class="text-animation">I'm a <span></span></h3>
 
@@ -53,14 +53,16 @@
       </div>
 
       <div class="home-img">
-        <img src="image.jpg" alt="home-img" />
+        <!-- <img src="image.jpg" alt="" /> -->
+        <!-- Connect the image with asset -->
+        <img src="{{ asset('playersinfo/'.$player->image) }}" alt="NFT" />
       </div>
     </section>
     <!-- About or Stats Section -->
     <section class="about" id="about">
       <div class="profile-card">
         <div class="image">
-          <img src="image.jpg" alt="" class="profile-img" />
+        <!-- <img src="image.jpg" alt="" /> -->
         </div>
         <div class="text-data">
           <span class="name"> Naveed Lihazi </span>
@@ -72,7 +74,7 @@
       </div>
       <div class="profile-card">
         <div class="image">
-          <img src="image.jpg" alt="" class="profile-img" />
+          <!-- <img src="image.jpg" alt="" class="profile-img" /> -->
         </div>
         <div class="text-data">
           <span class="name"> Naveed Lihazi </span>
@@ -84,7 +86,7 @@
       </div>
       <div class="profile-card">
         <div class="image">
-          <img src="image.jpg" alt="" class="profile-img" />
+          <!-- <img src="image.jpg" alt="" class="profile-img" /> -->
         </div>
         <div class="text-data">
           <span class="name"> Naveed Lihazi </span>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\playerinfo;
 use Illuminate\Http\Request;
 
 class MainController extends Controller
@@ -14,8 +15,10 @@ class MainController extends Controller
     {
         return view('players');
     }
-    public function showparticularplayer()
+    public function showparticularplayer($id)
     {
-        return view('particularplayer');
+        // return view('particularplayer');
+        $player = playerinfo::find($id);
+        return view('particularplayer',compact('player'));
     }
 }

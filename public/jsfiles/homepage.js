@@ -23,7 +23,8 @@ let runTimeOut;
 let runNextAuto = setTimeout(() => {
     next.click();
 }, timeAutoNext)
-function showSlider(type){
+function showSlider(type)
+{
     let  SliderItemsDom = SliderDom.querySelectorAll('.carousel .list .item');
     let thumbnailItemsDom = document.querySelectorAll('.carousel .thumbnail .item');
     
@@ -31,19 +32,23 @@ function showSlider(type){
         SliderDom.appendChild(SliderItemsDom[0]);
         thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
         carouselDom.classList.add('next');
-    }else{
+    }
+    else
+    {
         SliderDom.prepend(SliderItemsDom[SliderItemsDom.length - 1]);
         thumbnailBorderDom.prepend(thumbnailItemsDom[thumbnailItemsDom.length - 1]);
         carouselDom.classList.add('prev');
     }
     clearTimeout(runTimeOut);
-    runTimeOut = setTimeout(() => {
+    runTimeOut = setTimeout(() => 
+    {
         carouselDom.classList.remove('next');
         carouselDom.classList.remove('prev');
     }, timeRunning);
 
     clearTimeout(runNextAuto);
-    runNextAuto = setTimeout(() => {
+    runNextAuto = setTimeout(() => 
+    {
         next.click();
     }, timeAutoNext)
 }

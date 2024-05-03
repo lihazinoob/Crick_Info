@@ -38,8 +38,10 @@ Route::get('/discover',[MainController::class,'discovergenre']);
 
 Route::get('/players',[createplayerController::class,'showtheplayersinuserpanel']);
 
+
+
 Route::post('/listofplayers',[createplayerController::class,'storetheplayersinadminpanel'] );
 
-Route::get('/particularplayer',[MainController::class,'showparticularplayer'] );
+Route::get('/particularplayer/{id}',[MainController::class,'showparticularplayer'] );
 
 // Route::get('/players',[MainController::class,'players']);

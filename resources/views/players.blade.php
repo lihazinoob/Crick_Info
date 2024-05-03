@@ -36,13 +36,14 @@
       <div class='main'>
       <!-- Connect the image through asset-->
       
-      <img class='tokenImage' src="{{ asset('playersinfo/'.$player->image) }}" alt="NFT" />
+      <!-- <img class='tokenImage' src="{{ asset('playersinfo/'.$player->image) }}" alt="NFT" /> -->
         <h2>{{$player->full_name}}</h2>
         <p class='description'>{{$player->country}}</p>
 
         <hr />
         <div class="buttons">
-          <button>SEE MORE</button>
+          <button>
+            <a href="/particularplayer/{{$player->id}}">SEE MORE</a></button>
         </div>
       </div>
     </div>
