@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\playerinfo;
 use Illuminate\Http\Request;
-
+use App\Models\internationalteams;
 class MainController extends Controller
 {
     public function discovergenre()
@@ -24,6 +24,7 @@ class MainController extends Controller
 
     public function showteamlistinuserpanel()
     {
-        return view('teamlist');
+        $teams = internationalteams::get();
+        return view('TeamList',['teams'=>$teams]);
     }
 }

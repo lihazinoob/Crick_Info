@@ -30,124 +30,33 @@
 
   <h2>Men's International</h2>
     <div class="items">
+      @foreach($teams as $team)
+      <div class="profile-card">
+        <div class="image">
+          <!-- Link an image with asset -->
+          <img src="{{ asset('teamicons/'.$team->teamicon) }}" alt="" class="profile-img">
+
+          <!-- <img src="image/logo_discover" alt="" class="profile-img"> -->
+        </div>
+        <div class="text-data">
+          <span class="name">
+            {{$team->teamname}}
+          </span>
+          
+
+          <div class="buttons">
+            <button>SEE MORE</button>
+          </div>
+        </div>
+      </div>
+      @endforeach
       
-      <div class="profile-card">
-        <div class="image">
-          <!-- Link an image with asset -->
-          <img src="{{ asset('image/logo_discover.jpg') }}" alt="" class="profile-img">
-
-          <!-- <img src="image/logo_discover" alt="" class="profile-img"> -->
-        </div>
-        <div class="text-data">
-          <span class="name">
-            BANGLADESH
-          </span>
-          
-
-          <div class="buttons">
-            <button>SEE MORE</button>
-          </div>
-        </div>
-      </div>
-      <div class="profile-card">
-        <div class="image">
-          <!-- Link an image with asset -->
-          <img src="{{ asset('image/logo_discover.jpg') }}" alt="" class="profile-img">
-
-          <!-- <img src="image/logo_discover" alt="" class="profile-img"> -->
-        </div>
-        <div class="text-data">
-          <span class="name">
-            BANGLADESH
-          </span>
-          
-
-          <div class="buttons">
-            <button>SEE MORE</button>
-          </div>
-        </div>
-      </div>
-      <div class="profile-card">
-        <div class="image">
-          <!-- Link an image with asset -->
-          <img src="{{ asset('image/logo_discover.jpg') }}" alt="" class="profile-img">
-
-          <!-- <img src="image/logo_discover" alt="" class="profile-img"> -->
-        </div>
-        <div class="text-data">
-          <span class="name">
-            BANGLADESH
-          </span>
-          
-
-          <div class="buttons">
-            <button>SEE MORE</button>
-          </div>
-        </div>
-      </div>
     </div>
 
   </section>
 
   <section class="women" id="women">
-    <h2>Women International</h2>
-    <div class="items">
-    <div class="profile-card">
-        <div class="image">
-          <!-- Link an image with asset -->
-          <img src="{{ asset('image/logo_discover.jpg') }}" alt="" class="profile-img">
-
-          <!-- <img src="image/logo_discover" alt="" class="profile-img"> -->
-        </div>
-        <div class="text-data">
-          <span class="name">
-            BANGLADESH
-          </span>
-          
-
-          <div class="buttons">
-            <button>SEE MORE</button>
-          </div>
-        </div>
-      </div>
-      <div class="profile-card">
-        <div class="image">
-          <!-- Link an image with asset -->
-          <img src="{{ asset('image/logo_discover.jpg') }}" alt="" class="profile-img">
-
-          <!-- <img src="image/logo_discover" alt="" class="profile-img"> -->
-        </div>
-        <div class="text-data">
-          <span class="name">
-            BANGLADESH
-          </span>
-          
-
-          <div class="buttons">
-            <button>SEE MORE</button>
-          </div>
-        </div>
-      </div>
-      <div class="profile-card">
-        <div class="image">
-          <!-- Link an image with asset -->
-          <img src="{{ asset('image/logo_discover.jpg') }}" alt="" class="profile-img">
-
-          <!-- <img src="image/logo_discover" alt="" class="profile-img"> -->
-        </div>
-        <div class="text-data">
-          <span class="name">
-            BANGLADESH
-          </span>
-          
-
-          <div class="buttons">
-            <button>SEE MORE</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
+    
   </section>
 
 

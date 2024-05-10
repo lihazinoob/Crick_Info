@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\createIntlTeamController;
 use App\Http\Controllers\createplayerController;
 use App\Http\Controllers\iconicmomentsController;
 use App\Http\Controllers\MainController;
@@ -45,6 +46,15 @@ Route::post('/listofplayers',[createplayerController::class,'storetheplayersinad
 Route::get('/particularplayer/{id}',[MainController::class,'showparticularplayer'] );
 
 // This route is for getting the team names in the "TeamList.blade.php" file.
-Route::get('/teamlist',[MainController::class,'showteamlistinuserpanel'] );
+Route::get('/teams',[MainController::class,'showteamlistinuserpanel'] );
 
-// Route::get('/players',[MainController::class,'players']);
+// This route is to show the admin panel of creating International Teams.
+Route::get('/createIntlteams', function () {
+    return view('createInternationalTeam');
+});
+
+// This route is to post  the list of created teams in the admin panel.
+Route::post('/listofteams',[createIntlTeamController::class,'storetheteamsinadminpanel'] );
+
+
+
