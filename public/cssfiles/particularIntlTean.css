@@ -151,10 +151,7 @@ body{
   object-fit: cover;
   border-radius: 2%;
 }
-.about .about-infoholder .info-holder
-{
-  /* position: fixed; */
-}
+
 .about .about-infoholder .info-holder p{
   font-size: 2rem;
   color: white;
