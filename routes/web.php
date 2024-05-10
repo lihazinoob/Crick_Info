@@ -56,5 +56,7 @@ Route::get('/createIntlteams', function () {
 // This route is to post  the list of created teams in the admin panel.
 Route::post('/listofteams',[createIntlTeamController::class,'storetheteamsinadminpanel'] );
 
+// This is the route to show particular team details using the team id.
 
+Route::get('/particularIntlteam/{id}',[MainController::class,'showparticularIntlteam'] );
 

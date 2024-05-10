@@ -27,4 +27,11 @@ class MainController extends Controller
         $teams = internationalteams::get();
         return view('TeamList',['teams'=>$teams]);
     }
+    public function showparticularIntlteam($id)
+    {
+       $team = internationalteams::find($id);
+       return view ('/particularIntlTeam',compact('team'));
+    }
+    
+
 }

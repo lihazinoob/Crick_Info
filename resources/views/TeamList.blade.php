@@ -28,7 +28,7 @@
 
   <section class="men" id="men">
 
-  <h2>Men's International</h2>
+    <h2>Men's International</h2>
     <div class="items">
       @foreach($teams as $team)
       <div class="profile-card">
@@ -42,21 +42,22 @@
           <span class="name">
             {{$team->teamname}}
           </span>
-          
+
 
           <div class="buttons">
-            <button>SEE MORE</button>
+            <button><a href="/particularIntlteam/{{$team->id}}">
+                SEE MORE</a></button>
           </div>
         </div>
       </div>
       @endforeach
-      
+
     </div>
 
   </section>
 
   <section class="women" id="women">
-    
+
   </section>
 
 
