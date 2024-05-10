@@ -94,7 +94,8 @@ body{
 }
 
 .cover-image {
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  height: 100vh;  
   /* margin-top: 20rem; */
   /* margin-bottom: 10rem; */
   overflow: hidden; 
@@ -108,3 +109,62 @@ body{
   object-fit: cover; /* Scale the image while maintaining its aspect ratio to cover the container */
 }
 
+.about{
+  min-height: 100vh;
+  padding: 10rem 9% 10rem;
+}
+
+.about h1{
+  font-size: 4rem;
+  color: var(--main-color);
+  margin-bottom: 2rem;
+  align-items: center;
+}
+.about-infoholder{
+  display: flex;
+  height: 80vh;
+  /* justify-content: center; */
+  /* align-items:center; */
+  gap: 8rem;
+  margin-top: 5rem;
+}
+/* .about .about-infoholder {
+  width: 50%;
+  height: 50%;
+  
+  
+} */
+.image-holder
+{
+  flex:1;
+  /* width: 100%; */
+  height: auto;
+}
+.image-holder img 
+{
+  height : 100%;
+  object-fit: cover;
+}
+.about .about-infoholder .image-holder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2%;
+}
+.about .about-infoholder .info-holder
+{
+  /* position: fixed; */
+}
+.about .about-infoholder .info-holder p{
+  font-size: 2rem;
+  color: white;
+  line-height: 2.5rem;
+  text-align: justify;
+}
+.info-holder{
+  flex:1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
