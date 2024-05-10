@@ -21,4 +21,9 @@ class MainController extends Controller
         $player = playerinfo::find($id);
         return view('particularplayer',compact('player'));
     }
+
+    public function showteamlistinuserpanel()
+    {
+        return view('teamlist');
+    }
 }

@@ -44,4 +44,7 @@ Route::post('/listofplayers',[createplayerController::class,'storetheplayersinad
 
 Route::get('/particularplayer/{id}',[MainController::class,'showparticularplayer'] );
 
+// This route is for getting the team names in the "TeamList.blade.php" file.
+Route::get('/teamlist',[MainController::class,'showteamlistinuserpanel'] );
+
 // Route::get('/players',[MainController::class,'players']);

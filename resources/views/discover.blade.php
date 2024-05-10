@@ -51,9 +51,6 @@
           <button>SEE MORE</button>
         </div>
       </div>
-
-
-
     </div>
     <div class="profile-card">
       <div class="image">

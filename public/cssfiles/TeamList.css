@@ -1,0 +1,236 @@
+/* This CSS file is linked to the "TeamList.blade.php" file*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Defining the variable that will  be used everywhere */
+
+:root{
+  --bg-color:rgb(15,15,15);
+  --second-bg-color:#161616;
+  --text-color:white;
+  --main-color:orange;
+}
+html{
+  font-size:62.5%;
+  overflow-x: hidden;
+}
+
+body{
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding:3rem 9%;
+  background: rgba(0,0,0,.7);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo{
+  font-size: 3rem;
+  color: var(--text-color);
+  font-weight: 800;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+
+.logo:hover{
+  color: var(--main-color);
+  transform:scale(1.1);
+}
+
+.navbar a{
+  font-size: 1.8rem;
+  color: white;
+  margin-left: 4rem;
+  font-weight: 500;
+  transition: .3s ease-in-out;
+  border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover, .navbar a.active{
+  color: var(--main-color);
+  border-bottom: 3px solid var(--main-color);
+  
+}
+
+
+#menu-icon{
+  font-size: 3rem;
+  color:var(--main-color);
+  display: none;
+  cursor: pointer;
+}
+.men{
+  min-height: 100vh;
+  padding: 15rem 9% 10rem;
+}
+section
+{
+  min-height: 100vh;
+  padding: 10rem 9% 10rem;
+
+}
+h2{
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 500;
+
+  color: var(--text-color);
+}
+
+
+.items{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 10em;
+  align-items: center;
+
+}
+
+
+
+
+
+.image{
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius:  50%;
+  background-color: black;
+  padding: 2.5px;
+  
+}
+.profile-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 370px;
+  width: 100%;
+  background: white;
+  /* box-shadow: ; */
+  box-shadow: 0 5px 10px var(--main-color);
+  /* margin: 20px 20px; */
+  border-radius: 24px;
+  padding: 25px;
+  /* filter: blur(10px);
+  transition: .1s ease-in-out; */
+}
+.items:hover .profile-card{
+  opacity: .5;
+  filter: blur(3px);
+  transition: .2s ease-in-out;
+
+  
+}
+
+.items .profile-card:hover{
+  opacity: 1;
+  filter: blur(0px);
+  cursor:crosshair;
+  transform: scale(1.2);
+  
+  /* box-shadow: inherit 0 0 0 2000px rgba(0, 0, 0, .5); */
+}
+
+
+
+.image .profile-img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2.5px solid var(--main-color);
+}
+
+.profile-card .text-data{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-data .name{
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--second-bg-color);
+}
+
+.text-data .destination{
+  font-size: 15px;
+  font-weight: 400;
+}
+
+
+
+.profile-card .social-icons {
+  display: flex;
+  justify-content: center;
+  /* margin-top: 20px; */
+  margin-top: 15px;
+}
+
+.profile-card .social-icons .icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   color: #fff; 
+  font-size: 18 px;
+
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  background-color: black;
+  margin: 0 8px;
+  text-decoration: none;
+  z-index: .1;
+}
+
+.profile-card .social-icons .icon:hover{
+  background-color: #f4f4f4;
+  color: black;
+  border: 2px solid black;
+  z-index: 1;
+}
+
+.buttons button{
+  margin-top: .5em;
+  padding: .5em;
+    border: 2px solid black;
+    color: #f1683a;
+  /* border-radius: 90%; */
+    /* background-color: none; */
+    letter-spacing: 3px;
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 1.2em;
+    transition: .5s ease-in-out;
+}
+
+.buttons button:hover{
+  background-color: #f1683a;
+  color: #fff;
+  cursor: pointer;
+  border: 2px solid white;
+    
+}
