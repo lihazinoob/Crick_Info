@@ -11,17 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('playerinfos', function (Blueprint $table) {
-        $table->id();
-        $table->string('image');
-        $table->string('full_name');
-        $table->date('birth_date');
-        $table->string('batting_style')->nullable(); // nullable because it's optional in the form
-        $table->string('bowling_style')->nullable(); // nullable because it's optional in the form
-        $table->string('playing_role');
-        $table->string('country');
-        $table->timestamps();
-        });
+        
+
+           
+
+        
     }
 
     /**

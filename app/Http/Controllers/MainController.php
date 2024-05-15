@@ -29,9 +29,11 @@ class MainController extends Controller
     }
     public function showparticularIntlteam($id)
     {
-       $team = internationalteams::find($id);
+       $team = internationalteams::with('playerinfos')->find($id);
        return view ('/particularIntlTeam',compact('team'));
     }
+
+    
     
 
 }

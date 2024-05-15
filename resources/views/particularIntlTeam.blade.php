@@ -42,9 +42,11 @@
     </div>
   </section>
   <!-- Players section -->
-  <section class="players">
+  <section class="players" id ="players">
     <h1>Our Players</h1>
     <div class="players-infoholder">
+      @foreach($team->playerinfos as $playerinfo)
+     
       <div class="minip">
 
         <div class="mg">
@@ -54,152 +56,24 @@
           </div>
         </div>
         <div class="av" >
-          <img src="{{asset('/image/Virat_Kohli.jpg')}}" alt="">
+          <img src="{{asset('playersinfo/'.$playerinfo->image)}}" alt="">
         </div>
         <div class="info">
-          <name>Bangladesh</name>
+          <name>{{$playerinfo->country}}</name>
           <deets>
-            Tamim Iqbal<br>
-            Opener
+            {{$playerinfo->full_name}}<br>
+            {{$playerinfo->playing_role}}
           </deets>
         </div>
-        <a class="plot" title="plot with jinkyu" href="/players">
+        <a class="plot" title="plot with jinkyu" href="/particularplayer/{{$playerinfo->id}}">
           view more →
         </a>
       </div>
-
-      <div class="minip">
-
-        <div class="mg">
-          <div class="clr"></div>
-          <div class="group">
-            <span>Bangladesh</span>
-          </div>
-        </div>
-        <div class="av" >
-          <img src="{{asset('/image/Virat_Kohli.jpg')}}" alt="">
-        </div>
-        <div class="info">
-          <name>Bangladesh</name>
-          <deets>
-            Tamim Iqbal<br>
-            Opener
-          </deets>
-        </div>
-        <a class="plot" title="plot with jinkyu" href="/players">
-          view more →
-        </a>
-      </div>
-      <div class="minip">
-
-        <div class="mg">
-          <div class="clr"></div>
-          <div class="group">
-            <span>Bangladesh</span>
-          </div>
-        </div>
-        <div class="av" >
-          <img src="{{asset('/image/Virat_Kohli.jpg')}}" alt="">
-        </div>
-        <div class="info">
-          <name>Bangladesh</name>
-          <deets>
-            Tamim Iqbal<br>
-            Opener
-          </deets>
-        </div>
-        <a class="plot" title="plot with jinkyu" href="/players">
-          view more →
-        </a>
-      </div>
-      <div class="minip">
-
-        <div class="mg">
-          <div class="clr"></div>
-          <div class="group">
-            <span>Bangladesh</span>
-          </div>
-        </div>
-        <div class="av" >
-          <img src="{{asset('/image/Virat_Kohli.jpg')}}" alt="">
-        </div>
-        <div class="info">
-          <name>Bangladesh</name>
-          <deets>
-            Tamim Iqbal<br>
-            Opener
-          </deets>
-        </div>
-        <a class="plot" title="plot with jinkyu" href="/players">
-          view more →
-        </a>
-      </div>
-      <div class="minip">
-
-        <div class="mg">
-          <div class="clr"></div>
-          <div class="group">
-            <span>Bangladesh</span>
-          </div>
-        </div>
-        <div class="av" >
-          <img src="{{asset('/image/Virat_Kohli.jpg')}}" alt="">
-        </div>
-        <div class="info">
-          <name>Bangladesh</name>
-          <deets>
-            Tamim Iqbal<br>
-            Opener
-          </deets>
-        </div>
-        <a class="plot" title="plot with jinkyu" href="/players">
-          view more →
-        </a>
-      </div>
-      <div class="minip">
-
-        <div class="mg">
-          <div class="clr"></div>
-          <div class="group">
-            <span>Bangladesh</span>
-          </div>
-        </div>
-        <div class="av" >
-          <img src="{{asset('/image/Virat_Kohli.jpg')}}" alt="">
-        </div>
-        <div class="info">
-          <name>Bangladesh</name>
-          <deets>
-            Tamim Iqbal<br>
-            Opener
-          </deets>
-        </div>
-        <a class="plot" title="plot with jinkyu" href="/players">
-          view more →
-        </a>
-      </div>
-      <div class="minip">
-
-        <div class="mg">
-          <div class="clr"></div>
-          <div class="group">
-            <span>Bangladesh</span>
-          </div>
-        </div>
-        <div class="av" >
-          <img src="{{asset('/image/Virat_Kohli.jpg')}}" alt="">
-        </div>
-        <div class="info">
-          <name>Bangladesh</name>
-          <deets>
-            Tamim Iqbal<br>
-            Opener
-          </deets>
-        </div>
-        <a class="plot" title="plot with jinkyu" href="/players">
-          view more →
-        </a>
-      </div>
+      @endforeach
+      
+      
+      
+      
       
 
     </div>

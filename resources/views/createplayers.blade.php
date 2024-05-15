@@ -58,6 +58,13 @@
         <p>{{ $errors->first('country') }}</p>
         @endif
       </div>
+      <div class="input-group">
+        <label for="international_team">International Team:</label>
+        <input type="text" id="international_team" name="international_team" required value="{{old('international_team')}}">
+        @if ($errors->has('international_team'))
+        <p>{{ $errors->first('international_team') }}</p>
+        @endif
+      </div>
       <button type="submit">Submit</button>
     </form>
   </div>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\internationalteams;
 use Illuminate\Http\Request;
 use App\Models\playerinfo;
 
@@ -24,8 +25,12 @@ class createplayerController extends Controller
             'birth-date' => 'required',
             'playing-role' => 'required',
             'country' => 'required',
+            'international_team'=>'required'
         ]);
-        // dd($request->all());
+        //Accessing the team_id of international teams by the name of the international team of any particular player.
+        $internationalteam = internationalteams::where('teamname',$request->international_team)->first();
+        //  dd($request->all());
+        //dd($internationalteam->id);
         $imagename = time().'.'.$request->image->extension();
         $request->image->move(public_path('playersinfo'),$imagename);
         // dd($imagename);
@@ -38,6 +43,7 @@ class createplayerController extends Controller
         $playerinfo->bowling_style = $request->input('bowling-style');
         $playerinfo->playing_role = $request->input('playing-role');
         $playerinfo->country = $request->input('country');
+        $playerinfo->international_team_id = $internationalteam->id;
         $playerinfo->save();
 
     }
