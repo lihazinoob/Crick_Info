@@ -59,3 +59,6 @@ Route::post('/listofteams',[createIntlTeamController::class,'storetheteamsinadmi
 // This is the route to show particular team details using the team id.
 Route::get('/particularIntlteam/{id}',[MainController::class,'showparticularIntlteam'] );
 
+// This is the route for showing the admin panel.
+Route::get('/adminpanel',[MainController::class,'showadminpanel'] );
+

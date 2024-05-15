@@ -33,6 +33,10 @@ class MainController extends Controller
        return view ('/particularIntlTeam',compact('team'));
     }
 
+    public function showadminpanel()
+    {
+        return view('adminpanel');
+    }
     
     
 
