@@ -19,7 +19,7 @@
   <header>
     <nav>
       <div class="nav__data">
-        <a href="#" class="nav__logo">
+        <a href="/" class="nav__logo">
           <i class="ri-planet-line"></i> CrickInfo
         </a>
       </div>

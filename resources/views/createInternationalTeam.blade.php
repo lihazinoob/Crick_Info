@@ -135,7 +135,7 @@
 
       <!-- Form of creating players -->
 
-      <div class="player form-container" id="player-create-form">
+      <!-- <div class="player form-container" id="player-create-form">
         <h1>Register Player</h1>
         <div class="container">
           <form action="/listofplayers" method="POST" enctype="multipart/form-data">
@@ -194,8 +194,64 @@
           </form>
         </div>
 
-      </div>
+      </div> -->
 
+      <!-- Form of creating international teams -->
+      <div class="internationalteam form-container" id="player-create-form">
+        <h1>Register International Team</h1>
+        <div class="container">
+          <form action="/listofinternationalteams" method="POST" enctype="multipart/form-data">
+            @csrf
+            <div class="form-group">
+              <label for="team-image">Team Image</label>
+              <input type="file" id="team-image" name="team-image" accept="image/*" required value="{{old('team-image')}}">
+              @if ($errors->has('team-image'))
+              <p>{{ $errors->first('team-image') }}</p>
+              @endif
+            </div>
+            <div class="form-group">
+              <label for="team-name">Team Name</label>
+              <input type="text" id="team-name" name="team-name" required value="{{old('team-name')}}">
+              @if ($errors->has('team-name'))
+              <p>{{ $errors->first('team-name') }}</p>
+              @endif
+            </div>
+            <div class="form-group">
+              <label for="team-captain">Team Captain</label>
+              <input type="text" id="team-captain" name="team-captain" required value="{{old('team-captain')}}">
+              @if ($errors->has('team-captain'))
+              <p>{{ $errors->first('team-captain') }}</p>
+              @endif
+            </div>
+            <div class="form-group">
+              <label for="team-coach">Team Coach</label>
+              <input type="text" id="team-coach" name="team-coach" required value="{{old('team-coach')}}">
+              @if ($errors->has('team-coach'))
+              <p>{{ $errors->first('team-coach') }}</p>
+              @endif
+            </div>
+            <div class="form-group">
+              <label for="team-venue">Team Venue</label>
+              <input type="text" id="team-venue" name="team-venue" required value="{{old('team-venue')}}">
+              @if ($errors->has('team-venue'))
+              <p>{{ $errors->first('team-venue') }}</p>
+              @endif
+            </div>
+            <div class="form-group">
+              <label for="team-captain-image">Team Captain Image</label>
+              <input type="file" id="team-captain-image" name="team-captain-image" accept="image/*" required value="{{old('team-captain-image')}}">
+              @if ($errors->has('team-captain-image'))
+              <p>{{ $errors->first('team-captain-image') }}</p>
+              @endif
+            </div>
+            <div class="form-group">
+              <label for="team-coach-image">Team Coach Image</label>
+              <input type="file" id="team-coach-image" name="team-coach-image" accept="image/*" required value="{{old('team-coach-image')}}">
+              @if ($errors->has('team-coach-image'))
+              <p>{{ $errors->first('team-coach-image') }}</p>
+              @endif
+            </div>
+            <button type="submit">Submit</button>
 
 
 

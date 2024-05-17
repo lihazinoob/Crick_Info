@@ -403,6 +403,36 @@ main .player button[type="submit"] {
 main .player button[type="submit"]:hover {
   background-color:var(--blue);
 }
+/* Interbational Team CSS */
+main .internationalteam h1{
+	text-align: center;
+}
+
+main .internationalteam .form-group {
+	margin-bottom: 20px;
+}
+main .internationalteam .container{
+	max-width: 600px;
+	margin: 50px auto;
+	padding: 20px;
+	background-color: var(--light);
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+main .internationalteam button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color:var(--blue);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+main .internationalteam button[type="submit"]:hover {
+  background-color:var(--blue);
+}
+
 
 
 
