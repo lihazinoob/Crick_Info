@@ -32,6 +32,8 @@ Route::get('/listoficonicmoments',[MainController::class,'showtheiconicmomentsin
 Route::get('/create/{id}/update',[iconicmomentsController::class,'updateiconicmoments'] );
 // This route is for post method reagrding the update of iconic moments in admin panel.
 Route::post('/updateiconicmoments/{id}',[iconicmomentsController::class,'update'] );
+// This route is for deleting the iconic moments in admin panel.
+Route::get('/create/{id}/delete',[iconicmomentsController::class,'delete'] );
 
 
 // For the creation of players in admin panel.

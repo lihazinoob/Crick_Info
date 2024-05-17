@@ -17,7 +17,7 @@
         <form action="submit.php" method="post" enctype="multipart/form-data">
           <div class="form-group">
             <label for="image">Image:</label>
-            <input type="file" id="image" name="image" accept="image/*" required value="{{old('image')}}">
+            <input type="file" id="image" name="image" accept="image/*" >
             @if($errors->has('image'))
             <p>{{ $errors->first('image') }}</p>
             @endif

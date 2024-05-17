@@ -53,14 +53,24 @@ class iconicmomentsController extends Controller
     {
         // dd($request->all());
         $iconicmoments = iconicmoments::find($id);
-        $imagename = time().'.'.$request->image->extension();
-        $request->image->move(public_path('iconicmoments'),$imagename);
-        $iconicmoments->image = $imagename;
+        if(isset($request->image))
+        {
+            
+            $imagename = time().'.'.$request->image->extension();
+            $request->image->move(public_path('iconicmoments'),$imagename);
+            $iconicmoments->image = $imagename;
+        }
         $iconicmoments->author = $request->author;
         $iconicmoments->title = $request->title;
         $iconicmoments->topic = $request->topic;
         $iconicmoments->description = $request->description;
         $iconicmoments->save();
         return back()->with('success','Iconic Moment has been updated successfully');
+    }
+    public function delete($id)
+    {
+        $iconicmoments = iconicmoments::find($id);
+        $iconicmoments->delete();
+        return back()->with('success','Iconic Moment has been deleted successfully');
     }
 }
