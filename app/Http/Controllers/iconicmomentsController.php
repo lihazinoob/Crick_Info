@@ -40,5 +40,6 @@ class iconicmomentsController extends Controller
         $iconicmoments->topic = $request->topic;
         $iconicmoments->description = $request->description;
         $iconicmoments->save();
+        return back()->with('success','Iconic Moment has been added successfully');
     }
 }

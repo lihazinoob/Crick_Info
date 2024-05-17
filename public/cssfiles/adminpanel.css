@@ -309,6 +309,7 @@ body {
 /* MAIN */
 main{
   font-family: var(--lato);
+	overflow: hidden;
 }
 
 
@@ -362,6 +363,15 @@ main .icon button[type="submit"] {
 main .icon button[type="submit"]:hover {
   background-color:var(--blue);
 }
+
+
+
+
+
+
+
+
+
 
 main .player h1{
 	text-align: center;

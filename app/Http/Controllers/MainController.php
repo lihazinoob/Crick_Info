@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\iconicmoments;
 use App\Models\playerinfo;
 use Illuminate\Http\Request;
 use App\Models\internationalteams;
@@ -36,6 +36,12 @@ class MainController extends Controller
     public function showadminpanel()
     {
         return view('adminpanel');
+    }
+
+    public function showtheiconicmomentsinadminpanel()
+    {
+        $iconicmoments = iconicmoments::get();
+        return view('storeiconicmoments',['iconicmoments'=>$iconicmoments]);
     }
     
     

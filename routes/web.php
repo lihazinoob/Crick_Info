@@ -33,7 +33,10 @@ Route::get('/createplayers', function () {
 // to show the list of players in admin panel.
 
 
-Route::post('/store', [iconicmomentsController::class,'store'] );
+Route::post('/storeiconic', [iconicmomentsController::class,'store'] );
+
+// This route is for showing the list of iconic moments in admin panel.
+Route::get('/listoficonicmoments',[MainController::class,'showtheiconicmomentsinadminpanel'] );
 
 Route::get('/discover',[MainController::class,'discovergenre']);
 

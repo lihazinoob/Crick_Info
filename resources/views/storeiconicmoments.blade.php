@@ -10,6 +10,7 @@
   <!-- My CSS -->
   <!-- Use asset to link css -->
   <link rel="stylesheet" href="{{ asset('cssfiles/adminpanel.css') }}">
+  <link rel="stylesheet" href="{{ asset('cssfiles/storeiconicmoments.css') }}">
 
   <title>AdminHub</title>
 </head>
@@ -23,14 +24,14 @@
       <span class="text">AdminHub</span>
     </a>
     <ul class="side-menu top">
-      <li class="active">
+      <li>
         <a href="/create" onclick="showForm('iconic-moment-form')">
           <i class='bx bxs-dashboard'></i>
           <span class="text">Create Iconic Moments</span>
         </a>
       </li>
-      <li>
-        <a href="#" onclick="showForm('list-of-iconic-moment-form')">
+      <li class="active">
+        <a href="/listoficonicmoments" onclick="showForm('list-of-iconic-moment-form')">
           <i class='bx bxs-shopping-bag-alt'></i>
           <span class="text">Iconic Moments</span>
         </a>
@@ -131,11 +132,43 @@
     <main>
       <!-- Form of creating iconic moments -->
 
-      
-      
+      <div class="items">
+        @foreach ($iconicmoments as $iconicmoment) 
+        <div class="profile-card">
+          <div class="image">
+            <!-- Link an image with asset -->
+            <img src="{{ asset('iconicmoments/'.$iconicmoment->image) }}" alt="" class="profile-img">
+
+            <!-- <img src="image/logo_discover" alt="" class="profile-img"> -->
+          </div>
+          <div class="text-data">
+            <span class="name">
+              {{ $iconicmoment->author }}
+            </span>
+            <span class="destination">
+              {{ $iconicmoment->title }}
+            </span>
+            <span>
+              {{ $iconicmoment->topic }}
+            </span>
+            <span>
+              {{ $iconicmoment->description }}
+            </span>        
+            <div class="buttons">
+              <button>SEE MORE</button>
+            </div>
+          </div>
+        </div>
+        @endforeach
+        
+        
+        
+        
+      </div>
+
       <!-- Form of creating players -->
 
-     
+
 
 
 
@@ -148,14 +181,13 @@
     </main>
     <!-- MAIN -->
   </section>
+  <!-- create a table to show the information of iconicmomets -->\
+
+
   <!-- CONTENT -->
   <!-- Link the js file -->
   <script src="{{ asset('jsfiles/adminpanel.js') }}"></script>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        showForm('iconic-moment-form');
-    });
-  </script>
+
 
 </body>
