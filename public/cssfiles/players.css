@@ -95,6 +95,14 @@ body {
   border: 2.5px solid var(--main-color);
 }
 
+section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5rem 9% 5rem;
+  min-height: 100vh;
+}
 
 
 

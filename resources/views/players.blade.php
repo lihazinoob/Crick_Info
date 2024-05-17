@@ -39,28 +39,54 @@
 
   </header>
 
-  <div class="card">
-    @foreach($players as $player)
-    <div class="nft">
-      <div class='main'>
-        <!-- Connect the image through asset-->
+  <section>
+    <div class="card">
+      @foreach($players as $player)
+      <div class="nft">
+        <div class='main'>
+          <!-- Connect the image through asset-->
 
-        <img class='tokenImage' src="{{ asset('playersinfo/'.$player->image) }}" alt="NFT" />
-        <h2>{{$player->full_name}}</h2>
-        <p class='description'>{{$player->country}}</p>
+          <img class='tokenImage' src="{{ asset('playersinfo/'.$player->image) }}" alt="NFT" />
+          <h2>{{$player->full_name}}</h2>
+          <p class='description'>{{$player->country}}</p>
 
-        <hr />
-        <div class="buttons">
-          <button>
-            <a href="/particularplayer/{{$player->id}}">SEE MORE</a></button>
+          <hr />
+          <div class="buttons">
+            <button>
+              <a href="/particularplayer/{{$player->id}}">SEE MORE</a></button>
+          </div>
         </div>
       </div>
+      @endforeach
+
+
+
     </div>
-    @endforeach
+
+    <div class="card">
+
+      <div class="nft">
+        <div class='main'>
+          <!-- Connect the image through asset-->
+
+          <img class='tokenImage' src="{{ asset('image/logo_discover.jpg') }}" alt="NFT" />
+          <h2>Naveed</h2>
+          <p class='description'>LEGEND</p>
+
+          <hr />
+          <div class="buttons">
+            <button>
+              <a href="">SEE MORE</a></button>
+          </div>
+        </div>
+      </div>
 
 
 
-  </div>
+
+    </div>
+
+  </section>
 
 
 
