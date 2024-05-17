@@ -24,10 +24,15 @@
         </a>
       </div>
       <div class="nav_items">
-        <a href="{{url('/')}}">Iconic Moments</a>
+        <a href="{{url('/homepage')}}">Iconic Moments</a>
         <a href="{{url('/discover')}}">Discover</a>
-        <a href="#">Teams</a>
+        <a href="#">Your List</a>
       </div>
+      <div class="logout">
+        <i class='bx bx-log-out'></i>
+        <a href="#">LOGOUT</a>
+      </div>
+      
     </nav>
   </header>
 
@@ -41,14 +46,17 @@
       </div>
       <div class="text-data">
         <span class="name">
-          INTERNATIONAL CRICKET
+          TEAMS
         </span>
         <span class="destination">
-          TOURNAMENTS
+          Explore the Teams
         </span>
 
         <div class="buttons">
-          <button>SEE MORE</button>
+          <a href="/teams">
+            <button>SEE MORE</button>
+          </a>
+          
         </div>
       </div>
     </div>
@@ -61,14 +69,17 @@
       </div>
       <div class="text-data">
         <span class="name">
-          INTERNATIONAL CRICKET
+          STADIUMS
         </span>
         <span class="destination">
-          SERIES
+          Visit the Stadiums
         </span>
-        <div class="buttons">
-          <button>SEE MORE</button>
-        </div>
+        <a href="#">
+          <div class="buttons">
+            <button>SEE MORE</button>
+          </div>
+        </a>
+       
       </div>
 
 
@@ -83,13 +94,16 @@
       </div>
       <div class="text-data">
         <span class="name">
-          FRANCHIZE CRICKET
+          PLAYERS
         </span>
         <span class="destination">
-          IPL/PSL/BPL/BBL
+          Visit the player's profile
         </span>
         <div class="buttons">
-          <button>SEE MORE</button>
+          <a href="/players">
+            <button>SEE MORE</button>
+          </a>
+          
         </div>
       </div>
 

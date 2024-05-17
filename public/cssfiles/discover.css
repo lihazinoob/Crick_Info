@@ -17,6 +17,7 @@ body{
   background-color: white; 
   
 }
+
 nav {
   height: 100%;
   display: flex;
@@ -55,6 +56,14 @@ header a{
   color:black;
   margin-right: 40px;
 }
+
+header .logout{
+  color: #f1683a;
+  font-size: 1.2em;
+  transition: .2s ease-in-out;
+}
+
+
 
 .items{
   display: flex;

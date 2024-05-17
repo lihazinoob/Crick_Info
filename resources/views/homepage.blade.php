@@ -25,7 +25,7 @@
             <a href="/homepage" class="active"> Iconic Moments </a>
             <a href="/discover"> Discover </a>
             <a href="/"> Your List </a>
-           
+
         </nav>
         <div class="logout">
             <i class='bx bx-log-out'></i>
@@ -33,11 +33,11 @@
         </div>
         <div class="image">
             <a href="">
-            <img src="image/logo_discover.jpg" alt="">
+                <img src="image/logo_discover.jpg" alt="">
             </a>
-            
+
         </div>
-        
+
     </header>
 
     <!-- carousel -->
@@ -92,8 +92,8 @@
 
         <div class="arrows">
             <button id="prev">
-                <</button>
-            <button id="next">></button>
+                << /button>
+                    <button id="next">></button>
         </div>
         <!-- time running -->
         <div class="time"></div>
