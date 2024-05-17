@@ -238,3 +238,12 @@ h2{
   text-decoration: none;
   color: var(--second-bg-color);
 }
+
+.ipl{
+  min-height: 100vh;
+  padding: 15rem 9% 10rem;
+}
+.bpl{
+  min-height: 100vh;
+  padding: 15rem 9% 10rem;
+}
