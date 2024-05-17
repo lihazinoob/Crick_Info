@@ -14,29 +14,38 @@
 <!--  Thanks to frontendmentor.io for the challenge.  -->
 
 <body>
-  <header>
-    <nav>
-      <div class="nav__data">
-        <a href="#" class="nav__logo">
-          <i class="ri-planet-line"></i> CrickInfo
-        </a>
-      </div>
-      <div class="nav_items">
-        <a href="{{url('/')}}">Iconic Moments</a>
-        <a href="{{url('/discover')}}">Discover</a>
-        <a href="#">Teams</a>
-        <a href="{{url('/players')}}">Players</a>
-      </div>
+  <header class="header">
+
+    <a href="/homepage" class="nav__logo">
+      <i class="ri-planet-line"></i> CrickInfo
+    </a>
+
+    <nav class="navbar">
+      <a href="/homepage" class="active"> Iconic Moments </a>
+      <a href="/discover"> Discover </a>
+      <a href="/"> Your List </a>
+
     </nav>
+    <div class="logout">
+      <i class='bx bx-log-out'></i>
+      <a href="#">LOGOUT</a>
+    </div>
+    <div class="image">
+      <a href="">
+        <img src="image/logo_discover.jpg" alt="">
+      </a>
+
+    </div>
+
   </header>
 
   <div class="card">
     @foreach($players as $player)
     <div class="nft">
       <div class='main'>
-      <!-- Connect the image through asset-->
-      
-      <img class='tokenImage' src="{{ asset('playersinfo/'.$player->image) }}" alt="NFT" />
+        <!-- Connect the image through asset-->
+
+        <img class='tokenImage' src="{{ asset('playersinfo/'.$player->image) }}" alt="NFT" />
         <h2>{{$player->full_name}}</h2>
         <p class='description'>{{$player->country}}</p>
 
@@ -48,9 +57,9 @@
       </div>
     </div>
     @endforeach
-    
 
-    
+
+
   </div>
 
 

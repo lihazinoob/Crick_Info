@@ -20,10 +20,10 @@
 
     <nav class="navbar">
       <a href="#men" class="active"> International </a>
-      <a href="#services"> IPL </a>
-      <a href="#portfolio"> BPL </a>
-      <a href="#contact"> BBL </a>
-      <a href=""><i class='bx bx-log-out'></i>LOGOUT</a>
+      <a href="#ipl"> IPL </a>
+      <a href="#bpl"> BPL </a>
+      
+      <a href="/homepage">HOME</a>
 
     </nav>
   </header>
