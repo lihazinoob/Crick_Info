@@ -10,7 +10,7 @@ class createIntlTeamController extends Controller
 
     public function storetheteamsinadminpanel(Request $request)
     {
-        // dd($request->all());
+        //   dd($request->all());
         //validate the request
         $request->validate([
             'teamname' => 'required',
@@ -19,13 +19,13 @@ class createIntlTeamController extends Controller
             'teamcoverimage' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
         ]);
 
-        // dd($request->all());
+        //  dd($request->all());
 
         $iconname = time().'.'.$request->teamicon->extension();
         $request->teamicon->move(public_path('teamicons'),$iconname);
         $coverimagename = time().'.'.$request->teamcoverimage->extension();
         $request->teamcoverimage->move(public_path('teamcoverimages'),$coverimagename);
-        // dd($iconname,$coverimagename);
+        //  dd($iconname,$coverimagename);
         // Add the info to database
         // Adding the model to the controller.
         $internationalteams = new internationalteams();
