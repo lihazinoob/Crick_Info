@@ -7,11 +7,13 @@ use App\Http\Controllers\MainController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\authcontroller;
 
-Route::get('/',[authcontroller::class,'register']);
-Route::post('/storeadmin',[authcontroller::class,'storeadmin']);
-
-Route::get('/login',[authcontroller::class,'login']);
+Route::get('/',[authcontroller::class,'authenticationprocess']);
+// This Route is for LOGIN Purpose
 Route::post('/loginaction',[authcontroller::class,'loginaction']);
+
+// This Route is for REGISTER Purpose
+Route::post('/register',[authcontroller::class,'registeruser']);
+
 
 Route::get('/logout', function () {
     auth()->logout();

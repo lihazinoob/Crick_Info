@@ -9,11 +9,29 @@ use Illuminate\Validation\Rule;
 class authcontroller extends Controller
 {
     //
-    public function register()
+    public function authenticationprocess()
     {
         return view('login');
     }
-    public function storeadmin(Request $request)
+
+    public function loginaction(Request $request)
+    {
+        // dd($request->all());
+        $formFields = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => 'required'
+        ]);
+
+        
+        if (auth()->attempt($formFields)) {
+            $request->session()->regenerate();
+
+            return redirect('/adminpanel')->with('message', 'You are now logged in');
+        }
+
+        return back()->withErrors(['email' => 'Invalid Credentials'])->onlyInput('email');
+    }
+    public function registeruser(Request $request)
     {
         // dd($request->all());
         $formFields = $request->validate([
@@ -41,21 +59,5 @@ class authcontroller extends Controller
     {
         return view('register');
     }
-    public function loginaction(Request $request)
-    {
-        // dd($request->all());
-        $formFields = $request->validate([
-            'email' => ['required', 'email'],
-            'password' => 'required'
-        ]);
-
-        
-        if (auth()->attempt($formFields)) {
-            $request->session()->regenerate();
-
-            return redirect('/adminpanel')->with('message', 'You are now logged in');
-        }
-
-        return back()->withErrors(['email' => 'Invalid Credentials'])->onlyInput('email');
-    }
+    
 }
