@@ -133,7 +133,7 @@
       <!-- Form of creating iconic moments -->
 
       <div class="items">
-        @foreach ($iconicmoments as $iconicmoment) 
+        @foreach ($iconicmoments as $iconicmoment)
         <div class="profile-card">
           <div class="image">
             <!-- Link an image with asset -->
@@ -153,17 +153,23 @@
             </span>
             <span>
               {{ $iconicmoment->description }}
-            </span>        
+            </span>
             <div class="buttons">
-              <button>SEE MORE</button>
+              <a href="/create/{{$iconicmoment->id}}/update">
+                <button>UPDATE</button>
+              </a>
+              <a href="/create/{{$iconicmoment->id}}/delete">
+                <button>DELETE</button>
+              </a>
+
             </div>
           </div>
         </div>
         @endforeach
-        
-        
-        
-        
+
+
+
+
       </div>
 
       <!-- Form of creating players -->

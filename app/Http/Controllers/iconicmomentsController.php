@@ -42,4 +42,25 @@ class iconicmomentsController extends Controller
         $iconicmoments->save();
         return back()->with('success','Iconic Moment has been added successfully');
     }
+
+    public function updateiconicmoments($id)
+    {
+        // dd($id);
+        $iconicmoments = iconicmoments::find($id);
+        return view('updateiconicmoments',['iconicmoments'=>$iconicmoments]);
+    }
+    public function update(Request $request,$id)
+    {
+        // dd($request->all());
+        $iconicmoments = iconicmoments::find($id);
+        $imagename = time().'.'.$request->image->extension();
+        $request->image->move(public_path('iconicmoments'),$imagename);
+        $iconicmoments->image = $imagename;
+        $iconicmoments->author = $request->author;
+        $iconicmoments->title = $request->title;
+        $iconicmoments->topic = $request->topic;
+        $iconicmoments->description = $request->description;
+        $iconicmoments->save();
+        return back()->with('success','Iconic Moment has been updated successfully');
+    }
 }

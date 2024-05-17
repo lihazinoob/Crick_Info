@@ -30,7 +30,7 @@
         </a>
       </li>
       <li>
-        <a href="#" onclick="showForm('list-of-iconic-moment-form')">
+        <a href="/listoficonicmoments" onclick="showForm('list-of-iconic-moment-form')">
           <i class='bx bxs-shopping-bag-alt'></i>
           <span class="text">Iconic Moments</span>
         </a>
