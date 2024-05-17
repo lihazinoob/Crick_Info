@@ -22,6 +22,9 @@ Route::get('/logout', function () {
     return redirect('/login');
 });
 
+Route::get('/homepage', [iconicmomentsController::class, 'showtheiconicmoments']);
+
+
 // Route::get('/', [iconicmomentsController::class, 'showtheiconicmoments']);
 // This route is for creating iconic moments in admin panel.
 Route::get('/create', function () {

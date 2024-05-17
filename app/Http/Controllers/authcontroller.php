@@ -26,7 +26,7 @@ class authcontroller extends Controller
         if (auth()->attempt($formFields)) {
             $request->session()->regenerate();
 
-            return redirect('/adminpanel')->with('message', 'You are now logged in');
+            return redirect('/homepage')->with('message', 'You are now logged in');
         }
 
         return back()->withErrors(['email' => 'Invalid Credentials'])->onlyInput('email');

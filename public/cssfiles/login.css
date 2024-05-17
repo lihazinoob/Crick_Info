@@ -4,7 +4,9 @@
 * {
 	box-sizing: border-box;
 }
-
+:root{
+  --main-color: #f1683a;
+}
 body {
 	background: #f6f5f7;
 	display: flex;
@@ -160,9 +162,9 @@ input {
 }
 
 .overlay {
-	background: #FF416C;
-	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
-	background: linear-gradient(to right, #FF4B2B, #FF416C);
+	background:var(--main-color);
+	background: -webkit-linear-gradient(to right, #FF4B2B, var(--main-color));
+	background: linear-gradient(to right, #FF4B2B, var(--main-color));
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
