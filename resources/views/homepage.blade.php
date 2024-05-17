@@ -17,19 +17,25 @@
 
     <header class="header">
 
-        <a href="#" class="nav__logo">
+        <a href="/homepage" class="nav__logo">
             <i class="ri-planet-line"></i> CrickInfo
         </a>
 
         <nav class="navbar">
-            <a href="#home" class="active"> Iconic Moments </a>
-            <a href="#about"> Discover </a>
-            <a href="#services"> Admin </a>
+            <a href="/homepage" class="active"> Iconic Moments </a>
+            <a href="/discover"> Discover </a>
+            <a href="/"> Your List </a>
            
         </nav>
         <div class="logout">
             <i class='bx bx-log-out'></i>
             <a href="#">LOGOUT</a>
+        </div>
+        <div class="image">
+            <a href="">
+            <img src="image/logo_discover.jpg" alt="">
+            </a>
+            
         </div>
         
     </header>

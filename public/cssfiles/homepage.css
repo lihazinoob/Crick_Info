@@ -78,6 +78,15 @@ html{
     color: var(--main-color);
     transform:scale(1.1);
   }
+  .image img{
+    height: 35px;
+    width: 35px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2.5px solid var(--main-color);
+  }
+
+
 /* carousel */
 .carousel{
     height: 100vh;
