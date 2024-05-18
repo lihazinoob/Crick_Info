@@ -181,6 +181,24 @@ class admincontroller extends Controller
         
         return view('updateplayer',['players'=>$players]);
     }
+    public function updateplayerinadminpanel(Request $request,$id)
+    {
+        $players = playerinfo::find($id);
+        if(isset($request->image))
+        {
+            $image = time().'.'.$request->image->extension();
+            $request->image->move(public_path('playersinfo'),$image);
+            $players->image = $image;
+        }
+        $players->full_name = $request->input('full-name');
+        $players->birth_date = $request->input('birth-date');
+        $players->batting_style = $request->input('batting-style');
+        $players->bowling_style = $request->input('bowling-style');
+        $players->playing_role = $request->input('playing-role');
+        $players->country = $request->input('country');
+        $players->save();
+        return redirect('/storeplayers')->with('success','Player has been updated successfully');
+    }
 
    
 }

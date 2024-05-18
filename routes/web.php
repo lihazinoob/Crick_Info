@@ -120,7 +120,7 @@ Route::middleware('auth')->group(
         Route::get('/storeplayers', [admincontroller::class, 'showtheplayersinadminpanel']);
 
         Route::get('/create/{id}/updateplayer',[admincontroller::class,'updateplayershow']);
-
+        Route::post('/updateplayers/{id}',[admincontroller::class,'updateplayerinadminpanel']);
 
 
 
