@@ -59,6 +59,8 @@ class MainController extends Controller
         $fav = new fav();
         $fav->user_id = $userid;
         $fav->player_id = $id;
+        $fav->save();
+        return back();
 
     }
     
