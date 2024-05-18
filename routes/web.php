@@ -91,4 +91,4 @@ Route::get('/createStadium', function () {
 });
 
 // This route is for storing the stadium details in the database.
-Route::post('/storestadium', [admincontroller::class, 'storestadium']);
+Route::post('/storeStadium', [admincontroller::class, 'storestadium']);

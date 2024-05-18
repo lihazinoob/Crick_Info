@@ -142,7 +142,7 @@
 
             <div class="form-group">
               <label for="Coverpicture">Cover picture:</label>
-              <input type="file" id="Coverpicture" name="Coverpicture" accept="Profilepicture/*" required value="{{old('Coverpicture')}}">
+              <input type="file" id="Coverpicture" name="Coverpicture" accept="image/*" required value="{{old('Coverpicture')}}">
               @if($errors->has('Coverpicture'))
               <p>{{ $errors->first('Coverpicture') }}</p>
               @endif
@@ -185,70 +185,77 @@
             </div>
             <div class="form-group">
               <label for="topmomenttext1">Top Moments 1:</label>
-              <input type="text" id="topmomemnttext1" name="topmomemnttext1" required value="{{old('topmomenttext1')}}">
+              <input type="text" id="topmomenttext1" name="topmomenttext1" required value="{{old('topmomenttext1')}}">
               @if($errors->has('topmomenttext1'))
               <p>{{ $errors->first('topmomenttext1') }}</p>
               @endif
             </div>
             <div class="form-group">
-              <label for="topmomentimage1">Cover picture:</label>
-              <input type="file" id="topmomentimage1" name="topmomentimage1" accept="Profilepicture/*" required value="{{old('topmomentimage1')}}">
+              <label for="topmomentimage1">Top Moment picture 1:</label>
+              <input type="file" id="topmomentimage1" name="topmomentimage1" accept="image/*" required value="{{old('topmomentimage1')}}">
               @if($errors->has('topmomentimage1'))
               <p>{{ $errors->first('topmomentimage1') }}</p>
               @endif
             </div>
             <div class="form-group">
               <label for="topmomenttext2">Top Moments 2:</label>
-              <input type="text" id="topmomemnttext2" name="topmomemnttext2" required value="{{old('topmomenttext2')}}">
+              <input type="text" id="topmomenttext2" name="topmomenttext2" required value="{{old('topmomenttext2')}}">
               @if($errors->has('topmomenttext2'))
               <p>{{ $errors->first('topmomenttext2') }}</p>
               @endif
             </div>
             <div class="form-group">
-              <label for="topmomentimage2">Cover picture:</label>
-              <input type="file" id="topmomentimage2" name="topmomentimage2" accept="Profilepicture/*" required value="{{old('topmomentimage2')}}">
+              <label for="topmomentimage2">Top Moments Picture 2:</label>
+              <input type="file" id="topmomentimage2" name="topmomentimage2" accept="image/*" required value="{{old('topmomentimage2')}}">
               @if($errors->has('topmomentimage2'))
               <p>{{ $errors->first('topmomentimage2') }}</p>
               @endif
             </div>
             <div class="form-group">
               <label for="topmomenttext3">Top Moments 3:</label>
-              <input type="text" id="topmomemnttext3" name="topmomemnttext3" required value="{{old('topmomenttext3')}}">
+              <input type="text" id="topmomenttext3" name="topmomenttext3" required value="{{old('topmomenttext3')}}">
               @if($errors->has('topmomenttext3'))
               <p>{{ $errors->first('topmomenttext3') }}</p>
               @endif
             </div>
             <div class="form-group">
-              <label for="topmomentimage3">Cover picture:</label>
-              <input type="file" id="topmomentimage3" name="topmomentimage3" accept="Profilepicture/*" required value="{{old('topmomentimage3')}}">
+              <label for="topmomentimage3">Top Moments Picture 3:</label>
+              <input type="file" id="topmomentimage3" name="topmomentimage3" accept="image/*" required value="{{old('topmomentimage3')}}">
               @if($errors->has('topmomentimage3'))
               <p>{{ $errors->first('topmomentimage3') }}</p>
               @endif
             </div>
             <div class="form-group">
-              <label for="topmoementtext4">Top Moments 3:</label>
-              <input type="text" id="topmomemnttext4" name="topmomemnttext4" required value="{{old('topmoementtext4')}}">
-              @if($errors->has('topmoementtext4'))
-              <p>{{ $errors->first('topmoementtext4') }}</p>
+              <label for="topmoementtext4">Top Moments 4:</label>
+              <input type="text" id="topmomenttext4" name="topmomenttext4" required value="{{old('topmomenttext4')}}">
+              @if($errors->has('topmomenttext4'))
+              <p>{{ $errors->first('topmomenttext4') }}</p>
               @endif
             </div>
             <div class="form-group">
-              <label for="topomentimage4">Cover picture:</label>
-              <input type="file" id="topomentimage4" name="topomentimage4" accept="Profilepicture/*" required value="{{old('topomentimage4')}}">
-              @if($errors->has('topomentimage4'))
-              <p>{{ $errors->first('topomentimage4') }}</p>
+              <label for="topmomentimage4">Top Moments Picture 4:</label>
+              <input type="file" id="topmomentimage4" name="topmomentimage4" accept="image/*" required value="{{old('topomentimage4')}}">
+              @if($errors->has('topmomentimage4'))
+              <p>{{ $errors->first('topmomentimage4') }}</p>
               @endif
             </div>
             <div class="form-group">
-              <label for="featuretext">Cover picture:</label>
-              <input type="file" id="featuretext" name="featuretext" accept="Profilepicture/*" required value="{{old('featuretext')}}">
+              <label for="featuretext">Enter a unique Feature</label>
+              <input type="text" id="featuretext" name="featuretext"  required value="{{old('featuretext')}}">
               @if($errors->has('featuretext'))
               <p>{{ $errors->first('featuretext') }}</p>
               @endif
             </div>
             <div class="form-group">
-              <label for="featureimage">Cover picture:</label>
-              <input type="file" id="featureimage" name="featureimage" accept="Profilepicture/*" required value="{{old('featureimage')}}">
+              <label for="featuredescription">Feature Description</label>
+              <textarea id="featuredescription" name="featuredescription" required value="{{old('featuredescription')}}"></textarea>
+              @if ($errors->has('featuredescription'))
+              <p>{{ $errors->first('featuredescription') }}</p>
+              @endif
+            </div>
+            <div class="form-group">
+              <label for="featureimage">Feature picture:</label>
+              <input type="file" id="featureimage" name="featureimage" accept="image/*" required value="{{old('featureimage')}}">
               @if($errors->has('featureimage'))
               <p>{{ $errors->first('featureimage') }}</p>
               @endif
