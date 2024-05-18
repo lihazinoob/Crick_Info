@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class playerinfo extends Model
 {
@@ -12,8 +13,6 @@ class playerinfo extends Model
     {
         return $this->belongsTo(internationalteams::class);
     }
-    public function favs()
-    {
-        return $this->hasMany(fav::class);
-    }
+    
+    
 }

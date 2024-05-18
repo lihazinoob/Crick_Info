@@ -50,7 +50,9 @@ Route::get('/players', [createplayerController::class, 'showtheplayersinuserpane
 
 
 Route::get('/particularplayer/{id}', [MainController::class, 'showparticularplayer']);
-Route::get('/addtolist/{id}/{userid}', [MainController::class, 'addtolist']);
+Route::get('/addtolist/{id}', [MainController::class, 'addtolist']);
+
+Route::get('/yourlist',[MainController::class,'showyourlist']);
 
 // This route is for getting the team names in the "TeamList.blade.php" file.
 Route::get('/teams', [MainController::class, 'showteamlistinuserpanel']);
@@ -62,7 +64,8 @@ Route::get('/teams', [MainController::class, 'showteamlistinuserpanel']);
 
 // This is the route to show particular team details using the team id.
 Route::get('/particularIntlteam/{id}', [MainController::class, 'showparticularIntlteam']);
-
+// This route is for stadiums
+Route::get('/stadiums', [MainController::class, 'showstadiumlistinuserpanel']);
 
 Route::middleware('auth')->group(
     function () {

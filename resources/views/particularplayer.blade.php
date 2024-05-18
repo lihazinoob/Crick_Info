@@ -19,10 +19,7 @@
 
       <nav class="navbar">
         <a href="#home" class="active"> Home </a>
-        <a href="#about"> About </a>
-        <a href="#services"> Services </a>
-        <a href="#portfolio"> Portfolio </a>
-        <a href="#contact"> Contact </a>
+        <a href="#about"> STATS </a>       
       </nav>
     </header>
     <!-- Home Section -->
@@ -30,10 +27,10 @@
       <div class="home-content">
         <h1><span>{{$player->full_name}}</span></h1>
 
-        <h3 class="text-animation">I'm a <span></span></h3>
+        
 
         <p>
-          This is the portfolio for many use cases. Use it like you want to.
+          {{$player->country}}
         </p>
 
         <div class="social-icons">
@@ -46,9 +43,6 @@
           <a href="#">
             <i class="fab fa-instagram"></i>
           </a>
-          <a href="#">
-            <i class="fab fa-linkedin"></i>
-          </a>
         </div>
       </div>
 
@@ -59,77 +53,55 @@
       </div>
     </section>
     <!-- About or Stats Section -->
+    <h2 class="heading">Stats</h2>
     <section class="about" id="about">
+      
       <div class="profile-card">
         <div class="image">
-        <!-- <img src="image.jpg" alt="" /> -->
+          <!-- Link the image with asset -->
+          <img src="{{ asset('image/testball.jpg') }}" alt="" class="profile-img" />
         </div>
         <div class="text-data">
-          <span class="name"> Naveed Lihazi </span>
-          <span class="destination"> GOTHAM </span>
-          <div class="tag-line">
-            <span> "I AM VENGEANCE" </span>
-          </div>
+          <span class="name"> TEST MATCHES </span>
+          <span class="destination"> MATCHES:  </span>
+          <span class="destination"> RUN:  </span>
+          <span class="destination"> WICKETS:  </span>
+
+          
         </div>
       </div>
       <div class="profile-card">
         <div class="image">
-          <!-- <img src="image.jpg" alt="" class="profile-img" /> -->
+          <!-- Link the image with asset -->
+          <img src="{{ asset('image/testball.jpg') }}" alt="" class="profile-img" />
         </div>
         <div class="text-data">
-          <span class="name"> Naveed Lihazi </span>
-          <span class="destination"> GOTHAM </span>
-          <div class="tag-line">
-            <span> "I AM VENGEANCE" </span>
-          </div>
+          <span class="name"> ODI MATCHES </span>
+          <span class="destination"> MATCHES:  </span>
+          <span class="destination"> RUN:  </span>
+          <span class="destination"> WICKETS:  </span>
+
+          
         </div>
       </div>
       <div class="profile-card">
         <div class="image">
-          <!-- <img src="image.jpg" alt="" class="profile-img" /> -->
+          <!-- Link the image with asset -->
+          <img src="{{ asset('image/testball.jpg') }}" alt="" class="profile-img" />
         </div>
         <div class="text-data">
-          <span class="name"> Naveed Lihazi </span>
-          <span class="destination"> GOTHAM </span>
-          <div class="tag-line">
-            <span> "I AM VENGEANCE" </span>
-          </div>
+          <span class="name"> T20 MATCHES </span>
+          <span class="destination"> MATCHES:  </span>
+          <span class="destination"> RUN:  </span>
+          <span class="destination"> WICKETS:  </span>
+
+          
         </div>
       </div>
     </section>
 
     <!-- TimeLine Section -->
 
-    <div class="timeline-section" id="education">
-      <h2 class="heading">Education</h2>
-      <div class="timeline-items">
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">2022</div>
-          <div class="timeline-content">
-            <h3>Graduation</h3>
-            <p>Graduated from University of Gotham</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">2022</div>
-          <div class="timeline-content">
-            <h3>Graduation</h3>
-            <p>Graduated from University of Gotham</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">2022</div>
-          <div class="timeline-content">
-            <h3>Graduation</h3>
-            <p>Graduated from University of Gotham</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    
   </body>
 </html>

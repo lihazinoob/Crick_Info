@@ -74,7 +74,7 @@
         <span class="destination">
           Visit the Stadiums
         </span>
-        <a href="#">
+        <a href="/stadiums">
           <div class="buttons">
             <button>SEE MORE</button>
           </div>

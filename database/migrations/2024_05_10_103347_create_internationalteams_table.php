@@ -30,8 +30,11 @@ return new class extends Migration
             $table->string('country');
             // $table->string('International_Team');//to store the international team name
             $table->unsignedBigInteger('international_team_id');
+            
             $table->timestamps();
             $table->foreign('international_team_id')->references('id')->on('internationalteams');
+            
+            
             
             
             });

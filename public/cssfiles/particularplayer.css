@@ -126,7 +126,7 @@ span{
 }
 
 .home-content p{
-  font-size : 1.8rem;
+  font-size : 4rem;
   font-weight: 500;
 }
 
@@ -186,56 +186,7 @@ span{
   }
 }
 
-@keyframes words{
-  0%,
-  20%{
-    content: "Web Developer";
-  }
-  21%,
-  40%{
-    content: "UI/UX Designer";
-  }
-  41%,
-  60%{
-    content: "Freelancer";
-  }
-  61%,
-  80%{
-    content: "Photographer";
-  }
-  81%,
-  100%{
-    content: "Graphic Designer";
-  }
-}
 
-@keyframes typing{
-  10%,
-  15%,
-  30%,
-  35%,
-  50%,
-  55%,
-  70%,
-  75%,
-  90%,
-  95%{
-    width:0;
-  }
-  5%,
-  20%,
-  25%,
-  40%,
-  45%,
-  60%,
-  65%,
-  80%,
-  85%
-  {
-    width:calc(100% + 8px);
-  }
-
-}
 /* Design of the about section */
 
 .about{
@@ -275,6 +226,14 @@ span{
   background-color: var(--main-color);
   padding: 2.5px;
   
+}
+h2{
+  font-size: 5rem;
+  margin-bottom: 5rem;
+  justify-content: center;
+  padding-left: 41%;
+  /* position: relative; */
+
 }
 
 .image .profile-img{

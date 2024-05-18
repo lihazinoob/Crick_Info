@@ -21,7 +21,8 @@
       <a href="#about"> Know US</a>
       <a href="#players"> Players </a>
       <a href="#history"> Historical Events </a>
-      <a href="#gallery"> Gallery </a>
+      
+      
 
     </nav>
   </header>

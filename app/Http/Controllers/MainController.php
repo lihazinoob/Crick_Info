@@ -1,12 +1,16 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\iconicmoments;
 use App\Models\playerinfo;
 use Illuminate\Http\Request;
 use App\Models\internationalteams;
 use App\Models\place;
 use App\Models\fav;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+
 
 class MainController extends Controller
 {
@@ -22,18 +26,18 @@ class MainController extends Controller
     {
         // return view('particularplayer');
         $player = playerinfo::find($id);
-        return view('particularplayer',compact('player'));
+        return view('particularplayer', compact('player'));
     }
 
     public function showteamlistinuserpanel()
     {
         $teams = internationalteams::get();
-        return view('TeamList',['teams'=>$teams]);
+        return view('TeamList', ['teams' => $teams]);
     }
     public function showparticularIntlteam($id)
     {
-       $team = internationalteams::with('playerinfos')->find($id);
-       return view ('/particularIntlTeam',compact('team'));
+        $team = internationalteams::with('playerinfos')->find($id);
+        return view('/particularIntlTeam', compact('team'));
     }
 
     public function showadminpanel()
@@ -44,25 +48,21 @@ class MainController extends Controller
     public function showtheiconicmomentsinadminpanel()
     {
         $iconicmoments = iconicmoments::get();
-        return view('storeiconicmoments',['iconicmoments'=>$iconicmoments]);
+        return view('storeiconicmoments', ['iconicmoments' => $iconicmoments]);
     }
 
     public function showthestadiumsinadminpanel()
     {
         $stadiums = place::get();
-        return view('storestadiums',['stadiums'=>$stadiums]);
+        return view('storestadiums', ['stadiums' => $stadiums]);
     }
-    
-    public function addtolist($id,$userid)
+
+    public function showstadiumlistinuserpanel()
     {
-        // insert into favs table
-        $fav = new fav();
-        $fav->user_id = $userid;
-        $fav->player_id = $id;
-        $fav->save();
-        return back();
-
+      $stadium = place::get();
+      return view('stadiums', ['stadium' => $stadium]);  
+      
     }
-    
 
+    
 }
