@@ -33,7 +33,9 @@ return new class extends Migration
             $table->timestamps();
             $table->foreign('international_team_id')->references('id')->on('internationalteams');
             
+            
             });
+            
     }
 
     /**

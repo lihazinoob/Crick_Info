@@ -55,6 +55,9 @@
             <button>
               <a href="/particularplayer/{{$player->id}}">SEE MORE</a>
             </button>
+            <button>
+              <a href="/addtolist/{{$player->id}}/{{$users->id}}">ADD TO LIST</a>
+            </button>
           </div>
         </div>
       </div>
@@ -64,31 +67,7 @@
 
     </div>
 
-    <div class="card">
-
-      <div class="nft">
-        <div class='main'>
-          <!-- Connect the image through asset-->
-
-          <img class='tokenImage' src="{{ asset('image/logo_discover.jpg') }}" alt="NFT" />
-          <h2>Naveed</h2>
-          <p class='description'>LEGEND</p>
-
-          <hr />
-          <div class="buttons">
-            <button>
-              <a href="">SEE MORE</a></button>
-
-              <button>
-                <a href="">ADD TO LIST</a></button>
-          </div>
-        </div>
-      </div>
-
-
-
-
-    </div>
+    
 
   </section>
 

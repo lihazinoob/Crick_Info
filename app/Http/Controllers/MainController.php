@@ -6,6 +6,7 @@ use App\Models\playerinfo;
 use Illuminate\Http\Request;
 use App\Models\internationalteams;
 use App\Models\place;
+use App\Models\fav;
 
 class MainController extends Controller
 {
@@ -52,6 +53,14 @@ class MainController extends Controller
         return view('storestadiums',['stadiums'=>$stadiums]);
     }
     
+    public function addtolist($id,$userid)
+    {
+        // insert into favs table
+        $fav = new fav();
+        $fav->user_id = $userid;
+        $fav->player_id = $id;
+
+    }
     
 
 }

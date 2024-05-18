@@ -12,4 +12,8 @@ class playerinfo extends Model
     {
         return $this->belongsTo(internationalteams::class);
     }
+    public function favs()
+    {
+        return $this->hasMany(fav::class);
+    }
 }
