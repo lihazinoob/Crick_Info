@@ -177,6 +177,13 @@
               @endif
             </div>
             <div class="form-group">
+              <label for="description">Description</label>
+              <textarea id="description" name="description" required value="{{old('description')}}"></textarea>
+              @if ($errors->has('description'))
+              <p>{{ $errors->first('description') }}</p>
+              @endif
+            </div>
+            <div class="form-group">
               <label for="topmomenttext1">Top Moments 1:</label>
               <input type="text" id="topmomemnttext1" name="topmomemnttext1" required value="{{old('topmomenttext1')}}">
               @if($errors->has('topmomenttext1'))
