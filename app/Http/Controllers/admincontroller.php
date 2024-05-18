@@ -199,6 +199,12 @@ class admincontroller extends Controller
         $players->save();
         return redirect('/storeplayers')->with('success','Player has been updated successfully');
     }
+    public function deleteplayer($id)
+    {
+        $players = playerinfo::find($id);
+        $players->delete();
+        return back()->with('success','Player has been deleted successfully');
+    }
 
    
 }

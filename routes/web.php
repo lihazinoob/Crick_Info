@@ -121,6 +121,7 @@ Route::middleware('auth')->group(
 
         Route::get('/create/{id}/updateplayer',[admincontroller::class,'updateplayershow']);
         Route::post('/updateplayers/{id}',[admincontroller::class,'updateplayerinadminpanel']);
+        Route::get('/create/{id}/deleteplayer',[admincontroller::class,'deleteplayer']);
 
 
 
