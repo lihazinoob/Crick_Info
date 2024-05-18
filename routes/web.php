@@ -67,6 +67,9 @@ Route::get('/particularIntlteam/{id}', [MainController::class, 'showparticularIn
 // This route is for stadiums
 Route::get('/stadiums', [MainController::class, 'showstadiumlistinuserpanel']);
 
+Route::get('/particularstadium/{id}', [MainController::class, 'showparticularstadium']);
+
+
 Route::middleware('auth')->group(
     function () {
 

@@ -64,5 +64,14 @@ class MainController extends Controller
       
     }
 
+    public function showparticularstadium($id)
+    {
+        $stadium = place::find($id);
+        return view('particularstadium', compact('stadium'));
+    }
+
+    
+
+
     
 }
