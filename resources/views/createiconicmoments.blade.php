@@ -62,27 +62,16 @@
             <li>
                 <a href="#">
                     <i class='bx bxs-message-dots'></i>
-                    <span class="text">Create an PSL Team</span>
+                    <span class="text">Create a BPL Team</span>
                 </a>
             </li>
             <li>
                 <a href="#">
                     <i class='bx bxs-message-dots'></i>
-                    <span class="text">PSL Teams</span>
+                    <span class="text">BPL Teams</span>
                 </a>
             </li>
-            <li>
-                <a href="#">
-                    <i class='bx bxs-message-dots'></i>
-                    <span class="text">Add photos to Gallery</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class='bx bxs-message-dots'></i>
-                    <span class="text">Gallery</span>
-                </a>
-            </li>
+            
             <li>
                 <a href="#">
                     <i class='bx bxs-group'></i>

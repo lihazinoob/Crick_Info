@@ -18,12 +18,12 @@
 
 
   <section id="sidebar">
-    <a href="#" class="brand">
+    <a href="/adminpanel" class="brand">
       <i class='bx bxs-smile'></i>
       <span class="text">AdminHub</span>
     </a>
     <ul class="side-menu top">
-      <li class="active">
+      <li>
         <a href="/create" onclick="showForm('iconic-moment-form')">
           <i class='bx bxs-dashboard'></i>
           <span class="text">Create Iconic Moments</span>
@@ -62,25 +62,13 @@
       <li>
         <a href="#">
           <i class='bx bxs-message-dots'></i>
-          <span class="text">Create an PSL Team</span>
+          <span class="text">Create an BPL Team</span>
         </a>
       </li>
       <li>
         <a href="#">
           <i class='bx bxs-message-dots'></i>
-          <span class="text">PSL Teams</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bxs-message-dots'></i>
-          <span class="text">Add photos to Gallery</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bxs-message-dots'></i>
-          <span class="text">Gallery</span>
+          <span class="text">BPL Teams</span>
         </a>
       </li>
       <li>
@@ -102,7 +90,7 @@
         </a>
       </li>
       <li>
-        <a href="">
+        <a href="/listofstadiums">
           <i class='bx bxs-user-detail'></i>
           <span class="text">Stadiums</span>
         </a>

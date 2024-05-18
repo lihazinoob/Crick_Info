@@ -8,12 +8,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\authcontroller;
 use App\Http\Controllers\admincontroller;
 
-Route::get('/',[authcontroller::class,'authenticationprocess']);
+Route::get('/', [authcontroller::class, 'authenticationprocess']);
 // This Route is for LOGIN Purpose
-Route::post('/loginaction',[authcontroller::class,'loginaction']);
+Route::post('/loginaction', [authcontroller::class, 'loginaction']);
 
 // This Route is for REGISTER Purpose
-Route::post('/register',[authcontroller::class,'registeruser']);
+Route::post('/register', [authcontroller::class, 'registeruser']);
 
 
 Route::get('/logout', function () {
@@ -31,8 +31,7 @@ Route::get('/homepage', [iconicmomentsController::class, 'showtheiconicmoments']
 Route::get('/create', function () {
     return view('createiconicmoments');
 });
-// This route is for showing the list of iconic moments in admin panel.
-Route::get('/listoficonicmoments', [MainController::class, 'showtheiconicmomentsinadminpanel']);
+
 // This route is for updating the iconic moments in admin panel.
 Route::get('/create/{id}/update', [iconicmomentsController::class, 'updateiconicmoments']);
 // This route is for post method reagrding the update of iconic moments in admin panel.
@@ -82,6 +81,10 @@ Route::middleware('auth')->group(
 
         // This is the route for showing the admin panel.
         Route::get('/adminpanel', [MainController::class, 'showadminpanel']);
+        // This route is for showing the list of iconic moments in admin panel.
+        Route::get('/listoficonicmoments', [MainController::class, 'showtheiconicmomentsinadminpanel']);
+        Route::get('/listofstadiums', [MainController::class, 'showthestadiumsinadminpanel']);
+
     }
 );
 

@@ -5,6 +5,8 @@ use App\Models\iconicmoments;
 use App\Models\playerinfo;
 use Illuminate\Http\Request;
 use App\Models\internationalteams;
+use App\Models\place;
+
 class MainController extends Controller
 {
     public function discovergenre()
@@ -42,6 +44,12 @@ class MainController extends Controller
     {
         $iconicmoments = iconicmoments::get();
         return view('storeiconicmoments',['iconicmoments'=>$iconicmoments]);
+    }
+
+    public function showthestadiumsinadminpanel()
+    {
+        $stadiums = place::get();
+        return view('storestadiums',['stadiums'=>$stadiums]);
     }
     
     
