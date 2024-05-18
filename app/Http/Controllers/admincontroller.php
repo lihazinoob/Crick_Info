@@ -133,4 +133,40 @@ class admincontroller extends Controller
         $internationalteams = internationalteams::all();
         return view('storeintlteams',['internationalteams'=>$internationalteams]);
     }
+
+    public function updateIntlteam($id)
+    {
+        $internationalteams = internationalteams::find($id);
+        return view('updateIntlteam',['internationalteams'=>$internationalteams]);
+    }
+
+    public function updateIntlteaminadmin(Request $request,$id)
+    {
+        $internationalteams = internationalteams::find($id);
+        if(isset($request->teamicon))
+        {
+            $teamicon = time().'.'.$request->teamicon->extension();
+            $request->teamicon->move(public_path('teamicons'),$teamicon);
+            $internationalteams->teamicon = $teamicon;
+        }
+        else if(isset($request->teamcoverimage))
+        {
+            $teamcoverimage = time().'.'.$request->teamcoverimage->extension();
+            $request->teamcoverimage->move(public_path('teamcoverimages'),$teamcoverimage);
+            $internationalteams->teamcoverimage = $teamcoverimage;
+        }
+        $internationalteams->teamname = $request->teamname;
+        $internationalteams->teamdescription = $request->teamdescription;
+        $internationalteams->save();
+        return redirect('/listofIntlteams')->with('success','Team has been updated successfully');
+
+    }
+
+    public function deleteIntlteam($id)
+    {
+        $internationalteams = internationalteams::find($id);
+        $internationalteams->delete();
+        return back()->with('success','Team has been deleted successfully');
+    }
+    
 }

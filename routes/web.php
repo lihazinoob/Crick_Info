@@ -107,6 +107,9 @@ Route::middleware('auth')->group(
         //Route::post('/storeIntlteams', [createIntlTeamController::class, 'storetheteamsinadminpanel']);
         Route::get('/create/{id}/updateIntlteam', [admincontroller::class, 'updateIntlteam']);
 
+        Route::post('/updateIntlteam/{id}', [admincontroller::class, 'updateIntlteaminadmin']);
+        Route::get('/create/{id}/deleteIntlteam', [admincontroller::class, 'deleteIntlteam']);
+
 
 
 

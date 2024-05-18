@@ -144,10 +144,10 @@
              
             </span>
             <div class="buttons">
-              <a href="/create/{{$internationalteam->id}}/updatestadium">
+              <a href="/create/{{$internationalteam->id}}/updateIntlteam">
                 <button>UPDATE</button>
               </a>
-              <a href="/create/{{$internationalteam->id}}/deletestadium">
+              <a href="/create/{{$internationalteam->id}}/deleteIntlteam">
                 <button>DELETE</button>
               </a>
 
