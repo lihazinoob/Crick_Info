@@ -95,14 +95,14 @@
           <span class="text">Update a Player</span>
         </a>
       </li>
-      <li>
-        <a href="#">
+      <li class="active">
+        <a href="/createStadium">
           <i class='bx bxs-user-detail'></i>
           <span class="text">Create a Stadium</span>
         </a>
       </li>
       <li>
-        <a href="/createStadium">
+        <a href="#">
           <i class='bx bxs-user-detail'></i>
           <span class="text">Stadiums</span>
         </a>
@@ -128,14 +128,6 @@
     <!-- NAVBAR -->
     <nav>
       <i class='bx bx-menu'></i>
-      <!-- <form action="#">
-        <div class="form-input">
-          <input type="search" placeholder="Search...">
-          <button type="submit" class="search-btn"><i class='bx bx-search'></i></button>
-        </div>
-      </form>
-      <input type="checkbox" id="switch-mode" hidden>
-      <label for="switch-mode" class="switch-mode"></label> -->
 
     </nav>
     <!-- NAVBAR -->

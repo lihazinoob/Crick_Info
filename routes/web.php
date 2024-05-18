@@ -83,3 +83,8 @@ Route::middleware('auth')->group(
         Route::get('/adminpanel', [MainController::class, 'showadminpanel']);
     }
 );
+
+// This route is for showing the forms in createStadium Page
+Route::get('/createStadium', function () {
+    return view('createStadium');
+});
