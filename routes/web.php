@@ -55,12 +55,9 @@ Route::get('/particularplayer/{id}', [MainController::class, 'showparticularplay
 Route::get('/teams', [MainController::class, 'showteamlistinuserpanel']);
 
 // This route is to show the admin panel of creating International Teams.
-Route::get('/createIntlteams', function () {
-    return view('createInternationalTeam');
-});
 
-// This route is to post  the list of created teams in the admin panel.
-Route::post('/listofinternationalteams', [createIntlTeamController::class, 'storetheteamsinadminpanel']);
+
+
 
 // This is the route to show particular team details using the team id.
 Route::get('/particularIntlteam/{id}', [MainController::class, 'showparticularIntlteam']);
@@ -100,5 +97,20 @@ Route::middleware('auth')->group(
         Route::post('/updatestadium/{id}', [admincontroller::class, 'update']);
         // This route is for deleting the stadium details in admin panel.
         Route::get('/create/{id}/deletestadium', [admincontroller::class, 'delete']);
+
+        Route::get('/createIntlteams', function () {
+            return view('createInternationalTeam');
+        });
+
+        Route::post('/listofinternationalteams', [createIntlTeamController::class, 'storetheintlteamsinadminpanel']);
+        Route::get('/listofIntlteams', [admincontroller::class, 'showtheIntlteamsinadminpanel']);
+        //Route::post('/storeIntlteams', [createIntlTeamController::class, 'storetheteamsinadminpanel']);
+        Route::get('/create/{id}/updateIntlteam', [admincontroller::class, 'updateIntlteam']);
+
+
+
+
+        // This route is to post  the list of created teams in the admin panel.
+        
     }
 );

@@ -8,7 +8,7 @@ class createIntlTeamController extends Controller
 {
 
 
-    public function storetheteamsinadminpanel(Request $request)
+    public function storetheintlteamsinadminpanel(Request $request)
     {
         //   dd($request->all());
         //validate the request
@@ -34,5 +34,6 @@ class createIntlTeamController extends Controller
         $internationalteams->teamdescription = $request->input('teamdescription');
         $internationalteams->teamcoverimage = $coverimagename;
         $internationalteams->save();  
+        return redirect('/listofIntlteams')->with('status','The Team has been added successfully');
     }
 }

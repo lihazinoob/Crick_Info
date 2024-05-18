@@ -10,6 +10,7 @@
   <!-- My CSS -->
   <!-- Use asset to link css -->
   <link rel="stylesheet" href="{{ asset('cssfiles/adminpanel.css') }}">
+  <link rel="stylesheet" href="{{ asset('cssfiles/storeiconicmoments.css') }}">
 
   <title>AdminHub</title>
 </head>
@@ -41,7 +42,7 @@
           <span class="text">Create an International Team</span>
         </a>
       </li>
-      <li>
+      <li class="active">
         <a href="/listofIntlteams">
           <i class='bx bxs-message-dots'></i>
           <span class="text">International Teams</span>
@@ -95,7 +96,7 @@
           <span class="text">Stadiums</span>
         </a>
       </li>
-      
+
     </ul>
     <ul class="side-menu">
 
@@ -116,19 +117,49 @@
     <!-- NAVBAR -->
     <nav>
       <i class='bx bx-menu'></i>
-      
+
     </nav>
     <!-- NAVBAR -->
 
     <!-- MAIN -->
     <main>
-      <!-- Form of creating iconic moments -->
 
-      
-      
-      <!-- Form of creating players -->
+      <div class="items">
+        @foreach ($internationalteams as $internationalteam)
+        <div class="profile-card">
+          <div class="image">
+            <!-- Link an image with asset -->
+            <img src="{{ asset('teamicons/'.$internationalteam->teamicon) }}" alt="" class="profile-img">
 
-     
+            <!-- <img src="image/logo_discover" alt="" class="profile-img"> -->
+          </div>
+          <div class="text-data">
+            <span class="name">
+              NAME : {{ $internationalteam->teamname }}
+            </span>
+            <span class="destination">
+              LOCATION : {{ $internationalteam->teamdescription }}
+            </span>
+            <span>
+             
+            </span>
+            <div class="buttons">
+              <a href="/create/{{$internationalteam->id}}/updatestadium">
+                <button>UPDATE</button>
+              </a>
+              <a href="/create/{{$internationalteam->id}}/deletestadium">
+                <button>DELETE</button>
+              </a>
+
+            </div>
+          </div>
+        </div>
+        @endforeach
+
+
+
+
+      </div>
 
 
 
@@ -147,7 +178,7 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-        showForm('iconic-moment-form');
+      showForm('iconic-moment-form');
     });
   </script>
 

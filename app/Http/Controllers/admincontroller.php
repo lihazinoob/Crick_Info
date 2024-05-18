@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\internationalteams;
 use App\Models\place;
 use Illuminate\Http\Request;
 use App\Models\stadium;
@@ -125,5 +126,11 @@ class admincontroller extends Controller
         $stadium = place::find($id);
         $stadium->delete();
         return back()->with('success','Stadium has been deleted successfully');
+    }
+
+    public function showtheIntlteamsinadminpanel()
+    {
+        $internationalteams = internationalteams::all();
+        return view('storeintlteams',['internationalteams'=>$internationalteams]);
     }
 }
