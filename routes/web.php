@@ -47,7 +47,7 @@ Route::get('/players', [createplayerController::class, 'showtheplayersinuserpane
 
 
 
-Route::post('/listofplayers', [createplayerController::class, 'storetheplayersinadminpanel']);
+
 
 Route::get('/particularplayer/{id}', [MainController::class, 'showparticularplayer']);
 
@@ -110,10 +110,25 @@ Route::middleware('auth')->group(
         Route::post('/updateIntlteam/{id}', [admincontroller::class, 'updateIntlteaminadmin']);
         Route::get('/create/{id}/deleteIntlteam', [admincontroller::class, 'deleteIntlteam']);
 
+        // For the creation of players in admin panel.
+        Route::get('/createplayers', function () {
+            return view('createplayers');
+        });
+
+        Route::post('/listofplayers', [createplayerController::class, 'storetheplayersinadminpanel']);
+
+        Route::get('/storeplayers', [admincontroller::class, 'showtheplayersinadminpanel']);
+
+        Route::get('/create/{id}/updateplayer',[admincontroller::class,'updateplayershow']);
+
+
+
+
+
 
 
 
         // This route is to post  the list of created teams in the admin panel.
-        
+
     }
 );

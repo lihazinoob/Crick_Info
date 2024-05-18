@@ -53,7 +53,8 @@
           <hr />
           <div class="buttons">
             <button>
-              <a href="/particularplayer/{{$player->id}}">SEE MORE</a></button>
+              <a href="/particularplayer/{{$player->id}}">SEE MORE</a>
+            </button>
           </div>
         </div>
       </div>
@@ -77,6 +78,9 @@
           <div class="buttons">
             <button>
               <a href="">SEE MORE</a></button>
+
+              <button>
+                <a href="">ADD TO LIST</a></button>
           </div>
         </div>
       </div>

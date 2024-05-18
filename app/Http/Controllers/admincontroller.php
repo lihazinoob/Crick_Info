@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\internationalteams;
 use App\Models\place;
+use App\Models\playerinfo;
 use Illuminate\Http\Request;
 use App\Models\stadium;
 
@@ -169,4 +170,17 @@ class admincontroller extends Controller
         return back()->with('success','Team has been deleted successfully');
     }
     
+    public function showtheplayersinadminpanel()
+    {
+        $players = playerinfo::all();
+        return view('/storeplayers',['players'  => $players]);
+    }
+    public function updateplayershow($id)
+    {
+        $players= playerinfo::find($id);
+        
+        return view('updateplayer',['players'=>$players]);
+    }
+
+   
 }

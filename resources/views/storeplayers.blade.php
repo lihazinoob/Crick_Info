@@ -10,13 +10,11 @@
   <!-- My CSS -->
   <!-- Use asset to link css -->
   <link rel="stylesheet" href="{{ asset('cssfiles/adminpanel.css') }}">
-
+  <link rel="stylesheet" href="{{ asset('cssfiles/storeiconicmoments.css') }}">
   <title>AdminHub</title>
 </head>
 
 <body>
-
-
   <section id="sidebar">
     <a href="/adminpanel" class="brand">
       <i class='bx bxs-smile'></i>
@@ -42,23 +40,45 @@
         </a>
       </li>
       <li>
-        <a href="/listofIntlteams">
+        <a href="#">
           <i class='bx bxs-message-dots'></i>
           <span class="text">International Teams</span>
         </a>
       </li>
-      
-      
       <li>
-        <a href="createplayers">
-          <i class='bx bxs-group'></i>
-          <span class="text">Create a Player</span>
+        <a href="#">
+          <i class='bx bxs-message-dots'></i>
+          <span class="text">Create an IPL Team</span>
         </a>
       </li>
       <li>
         <a href="#">
+          <i class='bx bxs-message-dots'></i>
+          <span class="text">IPL Teams</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bxs-message-dots'></i>
+          <span class="text">Create an BPL Team</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bxs-message-dots'></i>
+          <span class="text">BPL Teams</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bxs-group'></i>
+          <span class="text">Create a Player</span>
+        </a>
+      </li>
+      <li class="active">
+        <a href="#">
           <i class='bx bxs-user-detail'></i>
-          <span class="text">Update a Player</span>
+          <span class="text">Players</span>
         </a>
       </li>
       <li>
@@ -73,7 +93,7 @@
           <span class="text">Stadiums</span>
         </a>
       </li>
-      
+
     </ul>
     <ul class="side-menu">
 
@@ -85,28 +105,55 @@
       </li>
     </ul>
   </section>
-  <!-- SIDEBAR -->
 
-
-
-  <!-- CONTENT -->
   <section id="content">
     <!-- NAVBAR -->
     <nav>
       <i class='bx bx-menu'></i>
-      
+
     </nav>
     <!-- NAVBAR -->
 
     <!-- MAIN -->
     <main>
-      <!-- Form of creating iconic moments -->
+      <div class="items">
+        @foreach ($players as $player)
+        <div class="profile-card">
+          <div class="image">
+            <!-- Link an image with asset -->
+            <img src="{{ asset('playersinfo/'.$player->image) }}" alt="" class="profile-img">
 
-      
-      
-      <!-- Form of creating players -->
+            <!-- <img src="image/logo_discover" alt="" class="profile-img"> -->
+          </div>
+          <div class="text-data">
+            <span class="name">
+              NAME : {{ $player->full_name }}
+            </span>
+            <span class="destination">
+              ROLE : {{ $player->playing_role }}
+            </span>
+            <span>
+              COUNTRY: {{ $player->country }}
+            </span>
+            <div class="buttons">
+              <a href="/create/{{$player->id}}/updateplayer">
+                <button>UPDATE</button>
+              </a>
+              <a href="/create/{{$player->id}}/deleteplayer">
+                <button>DELETE</button>
+              </a>
 
-     
+            </div>
+          </div>
+        </div>
+        @endforeach
+
+
+
+
+      </div>
+
+
 
 
 
@@ -119,14 +166,7 @@
     </main>
     <!-- MAIN -->
   </section>
-  <!-- CONTENT -->
-  <!-- Link the js file -->
-  <script src="{{ asset('jsfiles/adminpanel.js') }}"></script>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        showForm('iconic-moment-form');
-    });
-  </script>
+
 
 </body>

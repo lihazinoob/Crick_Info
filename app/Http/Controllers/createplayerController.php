@@ -45,6 +45,7 @@ class createplayerController extends Controller
         $playerinfo->country = $request->input('country');
         $playerinfo->international_team_id = $internationalteam->id;
         $playerinfo->save();
+        return redirect('/storeplayers')->with('message','Player Added Successfully');
 
     }
 }

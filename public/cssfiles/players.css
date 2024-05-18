@@ -263,3 +263,8 @@ section{
     }
   }
 }
+
+.buttons a{
+  text-decoration: none;
+  color: #282c34;
+}
