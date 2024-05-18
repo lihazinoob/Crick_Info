@@ -6,6 +6,7 @@ use App\Http\Controllers\iconicmomentsController;
 use App\Http\Controllers\MainController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\authcontroller;
+use App\Http\Controllers\admincontroller;
 
 Route::get('/',[authcontroller::class,'authenticationprocess']);
 // This Route is for LOGIN Purpose
@@ -88,3 +89,6 @@ Route::middleware('auth')->group(
 Route::get('/createStadium', function () {
     return view('createStadium');
 });
+
+// This route is for storing the stadium details in the database.
+Route::post('/storestadium', [admincontroller::class, 'storestadium']);
