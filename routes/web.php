@@ -27,17 +27,7 @@ Route::get('/homepage', [iconicmomentsController::class, 'showtheiconicmoments']
 
 
 // Route::get('/', [iconicmomentsController::class, 'showtheiconicmoments']);
-// This route is for creating iconic moments in admin panel.
-Route::get('/create', function () {
-    return view('createiconicmoments');
-});
 
-// This route is for updating the iconic moments in admin panel.
-Route::get('/create/{id}/update', [iconicmomentsController::class, 'updateiconicmoments']);
-// This route is for post method reagrding the update of iconic moments in admin panel.
-Route::post('/updateiconicmoments/{id}', [iconicmomentsController::class, 'update']);
-// This route is for deleting the iconic moments in admin panel.
-Route::get('/create/{id}/delete', [iconicmomentsController::class, 'delete']);
 
 
 // For the creation of players in admin panel.
@@ -83,15 +73,32 @@ Route::middleware('auth')->group(
         Route::get('/adminpanel', [MainController::class, 'showadminpanel']);
         // This route is for showing the list of iconic moments in admin panel.
         Route::get('/listoficonicmoments', [MainController::class, 'showtheiconicmomentsinadminpanel']);
-        Route::get('/listofstadiums', [MainController::class, 'showthestadiumsinadminpanel']);
+        // This route is for creating iconic moments in admin panel.
+        Route::get('/create', function () {
+            return view('createiconicmoments');
+        });
 
+        // This route is for updating the iconic moments in admin panel.
+        Route::get('/create/{id}/update', [iconicmomentsController::class, 'updateiconicmoments']);
+        // This route is for post method reagrding the update of iconic moments in admin panel.
+        Route::post('/updateiconicmoments/{id}', [iconicmomentsController::class, 'update']);
+        // This route is for deleting the iconic moments in admin panel.
+        Route::get('/create/{id}/delete', [iconicmomentsController::class, 'delete']);
+
+        // This route is for showing the forms in createStadium Page
+        Route::get('/createStadium', function () {
+            return view('createStadium');
+        });
+        // This route is for storing the stadium details in the database.
+        Route::post('/storeStadium', [admincontroller::class, 'storestadium']);
+
+
+        // This route is for showing the stadiums in admin panel.
+        Route::get('/listofstadiums', [MainController::class, 'showthestadiumsinadminpanel']);
+        // This route is for updating the stadium details in admin panel.
+        Route::get('/create/{id}/updatestadium', [admincontroller::class, 'updatestadium']);
+        Route::post('/updatestadium/{id}', [admincontroller::class, 'update']);
+        // This route is for deleting the stadium details in admin panel.
+        Route::get('/create/{id}/deletestadium', [admincontroller::class, 'delete']);
     }
 );
-
-// This route is for showing the forms in createStadium Page
-Route::get('/createStadium', function () {
-    return view('createStadium');
-});
-
-// This route is for storing the stadium details in the database.
-Route::post('/storeStadium', [admincontroller::class, 'storestadium']);

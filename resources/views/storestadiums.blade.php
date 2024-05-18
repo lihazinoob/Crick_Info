@@ -142,10 +142,10 @@
               CAPACITY: {{ $stadium->stadiumcapacity }}
             </span>
             <div class="buttons">
-              <a href="/create/{{$stadium->id}}/update">
+              <a href="/create/{{$stadium->id}}/updatestadium">
                 <button>UPDATE</button>
               </a>
-              <a href="/create/{{$stadium->id}}/delete">
+              <a href="/create/{{$stadium->id}}/deletestadium">
                 <button>DELETE</button>
               </a>
 
