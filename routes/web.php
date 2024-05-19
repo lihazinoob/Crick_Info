@@ -50,9 +50,9 @@ Route::get('/players', [createplayerController::class, 'showtheplayersinuserpane
 
 
 Route::get('/particularplayer/{id}', [MainController::class, 'showparticularplayer']);
-Route::get('/addtolist/{id}', [MainController::class, 'addtolist']);
+Route::get('/addtolist/{playerid}/{userid}',[MainController::class,'addtothelist']);
 
-Route::get('/yourlist',[MainController::class,'showyourlist']);
+Route::get('/yourlist/{userid}',[MainController::class,'showyourlist']);
 
 // This route is for getting the team names in the "TeamList.blade.php" file.
 Route::get('/teams', [MainController::class, 'showteamlistinuserpanel']);
@@ -74,6 +74,7 @@ Route::middleware('auth')->group(
     function () {
 
         // This is the route for showing the admin panel.
+        Route::get('/adminlogin',[authcontroller::class,'adminlogin']);
         Route::get('/adminpanel', [MainController::class, 'showadminpanel']);
         // This route is for showing the list of iconic moments in admin panel.
         Route::get('/listoficonicmoments', [MainController::class, 'showtheiconicmomentsinadminpanel']);

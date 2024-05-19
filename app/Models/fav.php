@@ -8,13 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class fav extends Model
 {
     use HasFactory;
-    public function user()
+    public function player()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(PlayerInfo::class, 'player_id');
     }
-    public function playerinfo()
-    {
-        return $this->belongsTo(playerinfo::class);
-    }
+    
 }
 

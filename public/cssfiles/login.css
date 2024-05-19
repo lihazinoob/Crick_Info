@@ -239,3 +239,7 @@ footer a {
     color: #3c97bf;
     text-decoration: none;
 }
+.adminmessageconatiner{
+	margin-top: 2rem;
+	color: var(--main-color);
+}

@@ -60,4 +60,8 @@ class authcontroller extends Controller
         return view('register');
     }
     
+    public function adminlogin()
+    {
+        return view('adminlogin');
+    }
 }

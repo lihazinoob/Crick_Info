@@ -7,25 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{{ asset('cssfiles/login.css') }}">
   <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-  <title>User Login</title>
+  <title>Admin Login</title>
 </head>
 
 <body>
-  <h2>USER LOGIN & REGISTRATION</h2>
+  <h2>ADMIN LOGIN</h2>
   <div class="container" id="container">
-    <div class="form-container sign-up-container">
-      <form action="/register" method="POST">
-        @csrf
-        <h1>Create Account</h1>
-
-
-        <input type="text" name="name" id="name" placeholder="Username" required>
-        <input type="email" name="email" id="email" placeholder="Email" required>
-        <input type="password" name="password" id="password" placeholder="Password" required>
-        <input type="password" name="password_confirmation" id="password_confirmation" placeholder="Confirm Password" required>
-        <button>Sign Up</button>
-      </form>
-    </div>
     <div class="form-container sign-in-container">
       <form action="/loginaction" method="POST">
         @csrf
@@ -45,22 +32,13 @@
           <button class="ghost" id="signIn">Sign In</button>
         </div>
         <div class="overlay-panel overlay-right">
-          <h1>Hello, CRICKLOVER!</h1>
-          <p>Enter your personal details and start journey with us</p>
-          <button class="ghost" id="signUp">Sign Up</button>
+          <h1>Hello,ADMIN!</h1>
+          <p>LOGIN TO CHANGE IN YOUR WEBSITE</p>
+          
         </div>
       </div>
     </div>
-    
-  </div>
-  <div class="adminmessageconatiner">
-      Admin? 
-      <a href="/adminlogin">LOGIN</a>
-      
+
   </div>
 
-  
-  <script src="{{ asset('jsfiles/login.js') }}"></script>
 </body>
-
-</html>
