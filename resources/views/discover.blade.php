@@ -26,11 +26,11 @@
       <div class="nav_items">
         <a href="{{url('/homepage')}}">Iconic Moments</a>
         <a href="{{url('/discover')}}">Discover</a>
-        <a href="#">Your List</a>
+        
       </div>
       <div class="logout">
         <i class='bx bx-log-out'></i>
-        <a href="#">LOGOUT</a>
+        <a href="/">LOGOUT</a>
       </div>
       
     </nav>
