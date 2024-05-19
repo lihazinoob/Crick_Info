@@ -23,7 +23,7 @@
     <nav class="navbar">
       <a href="/homepage" class="active"> Iconic Moments </a>
       <a href="/discover"> Discover </a>
-      <a href="/yourlist/{{$users->id}}">Your List</a>
+      
 
     </nav>
     
@@ -55,9 +55,6 @@
           <div class="buttons">
             <button>
               <a href="/particularplayer/{{$player->id}}">SEE MORE</a>
-            </button>
-            <button>
-              <a href="/addtolist/{{$player->id}}/{{$users->id}}">ADD to LIST</a>
             </button>
 
             

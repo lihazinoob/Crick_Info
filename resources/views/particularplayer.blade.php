@@ -19,7 +19,8 @@
 
       <nav class="navbar">
         <a href="#home" class="active"> Home </a>
-        <a href="#about"> STATS </a>       
+        <a href="#about"> STATS </a>
+        <a href="/discover">Discover</a>       
       </nav>
     </header>
     <!-- Home Section -->
