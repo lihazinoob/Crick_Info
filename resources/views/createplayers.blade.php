@@ -144,6 +144,71 @@
               <p>{{ $errors->first('international_team') }}</p>
               @endif
             </div>
+            <div class="form-group">
+              <label for="test_matches">Test Matches:</label>
+              <input type="number" id="test_matches" name="test_matches"  value="{{old('test_matches')}}">
+              @if ($errors->has('test_matches'))
+              <p>{{ $errors->first('test_matches') }}</p>
+              @endif
+            </div>
+            <div class="form-group">
+              <label for="test_runs">Test Runs:</label>
+              <input type="number" id="test_runs" name="test_runs"  value="{{old('test_runs')}}">
+              @if ($errors->has('test_runs'))
+              <p>{{ $errors->first('test_runs') }}</p>
+              @endif
+            </div>
+            <div class="form-group">
+              <label for="test_wickets">Test Wickets:</label>
+              <input type="number" id="test_wickets" name="test_wickets"  value="{{old('test_wickets')}}">
+              @if ($errors->has('test_wickets'))
+              <p>{{ $errors->first('test_wickets') }}</p>
+              @endif
+            </div>
+            <div class="form-group">
+              <label for="odi_matches">Odi Matches:</label>
+              <input type="number" id="odi_matches" name="odi_matches"  value="{{old('odi_matches')}}">
+              @if ($errors->has('odi_matches'))
+              <p>{{ $errors->first('odi_matches') }}</p>
+              @endif
+            </div>
+            <div class="form-group">
+              <label for="odi_runs">Odi Runs:</label>
+              <input type="number" id="odi_runs" name="odi_runs"  value="{{old('odi_runs')}}">
+              @if ($errors->has('odi_runs'))
+              <p>{{ $errors->first('odi_runs') }}</p>
+              @endif
+              </div>
+            
+            <div class="form-group">
+              <label for="odi_wickets">Odi Wickets:</label>
+              <input type="number" id="odi_wickets" name="odi_wickets"  value="{{old('odi_wickets')}}">
+              @if ($errors->has('odi_wickets'))
+              <p>{{ $errors->first('odi_wickets') }}</p>
+              @endif
+            </div>
+            <div class="form-group">
+              <label for="t20_matches">T20 Matches:</label>
+              <input type="number" id="t20_matches" name="t20_matches"  value="{{old('t20_matches')}}">
+              @if ($errors->has('t20_matches'))
+              <p>{{ $errors->first('t20_matches') }}</p>
+              @endif
+            </div>
+            <div class="form-group">
+              <label for="t20_runs">T20 Runs:</label>
+              <input type="number" id="t20_runs" name="t20_runs"  value="{{old('t20_runs')}}">
+              @if ($errors->has('t20_runs'))
+              <p>{{ $errors->first('t20_runs') }}</p>
+              @endif
+            </div>
+            <div class="form-group">
+              <label for="t20_wickets">T20 Wickets:</label>
+              <input type="number" id="t20_wickets" name="t20_wickets"  value="{{old('t20_wickets')}}">
+              @if ($errors->has('t20_wickets'))
+              <p>{{ $errors->first('t20_wickets') }}</p>
+              @endif
+            </div>
+
           </div>
 
           <button type="submit">Submit</button>

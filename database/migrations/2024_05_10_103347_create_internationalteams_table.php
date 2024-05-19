@@ -27,6 +27,18 @@ return new class extends Migration
             $table->string('batting_style')->nullable(); // nullable because it's optional in the form
             $table->string('bowling_style')->nullable(); // nullable because it's optional in the form
             $table->string('playing_role');
+            $table->integer('testmatches')->nullable();
+            $table->integer('testruns')->nullable();
+            $table->integer('testwickets')->nullable();
+            $table->float('testaverage')->nullable();
+            $table->integer('odimatches')->nullable();
+            $table->integer('odiruns')->nullable();
+            $table->integer('odiwickets')->nullable();
+            $table->float('odiaverage')->nullable();
+            $table->integer('t20matches')->nullable();
+            $table->integer('t20runs')->nullable();
+            $table->integer('t20wickets')->nullable();
+            $table->float('t20average')->nullable();
             $table->string('country');
             // $table->string('International_Team');//to store the international team name
             $table->unsignedBigInteger('international_team_id');
