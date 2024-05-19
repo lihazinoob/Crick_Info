@@ -42,43 +42,21 @@
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="/listofIntlteams">
           <i class='bx bxs-message-dots'></i>
           <span class="text">International Teams</span>
         </a>
       </li>
+
+
       <li>
-        <a href="#">
-          <i class='bx bxs-message-dots'></i>
-          <span class="text">Create an IPL Team</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bxs-message-dots'></i>
-          <span class="text">IPL Teams</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bxs-message-dots'></i>
-          <span class="text">Create an BPL Team</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bxs-message-dots'></i>
-          <span class="text">BPL Teams</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
+        <a href="/createplayers">
           <i class='bx bxs-group'></i>
           <span class="text">Create a Player</span>
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="/storeplayers">
           <i class='bx bxs-user-detail'></i>
           <span class="text">Update a Player</span>
         </a>

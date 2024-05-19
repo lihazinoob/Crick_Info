@@ -48,32 +48,10 @@
           <span class="text">International Teams</span>
         </a>
       </li>
+
+
       <li>
-        <a href="#">
-          <i class='bx bxs-message-dots'></i>
-          <span class="text">Create an IPL Team</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bxs-message-dots'></i>
-          <span class="text">IPL Teams</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bxs-message-dots'></i>
-          <span class="text">Create an BPL Team</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bxs-message-dots'></i>
-          <span class="text">BPL Teams</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
+        <a href="createplayers">
           <i class='bx bxs-group'></i>
           <span class="text">Create a Player</span>
         </a>
@@ -141,7 +119,7 @@
               LOCATION : {{ $internationalteam->teamdescription }}
             </span>
             <span>
-             
+
             </span>
             <div class="buttons">
               <a href="/create/{{$internationalteam->id}}/updateIntlteam">

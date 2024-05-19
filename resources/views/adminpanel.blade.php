@@ -50,13 +50,13 @@
       
       
       <li>
-        <a href="createplayers">
+        <a href="/createplayers">
           <i class='bx bxs-group'></i>
           <span class="text">Create a Player</span>
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="/storeplayers">
           <i class='bx bxs-user-detail'></i>
           <span class="text">Update a Player</span>
         </a>

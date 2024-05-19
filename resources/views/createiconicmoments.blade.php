@@ -23,7 +23,7 @@
             <span class="text">AdminHub</span>
         </a>
         <ul class="side-menu top">
-            <li>
+            <li class="active">
                 <a href="/create" onclick="showForm('iconic-moment-form')">
                     <i class='bx bxs-dashboard'></i>
                     <span class="text">Create Iconic Moments</span>

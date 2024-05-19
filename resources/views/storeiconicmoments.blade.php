@@ -30,7 +30,7 @@
           <span class="text">Create Iconic Moments</span>
         </a>
       </li>
-      <li>
+      <li class="active">
         <a href="/listoficonicmoments" onclick="showForm('list-of-iconic-moment-form')">
           <i class='bx bxs-shopping-bag-alt'></i>
           <span class="text">Iconic Moments</span>

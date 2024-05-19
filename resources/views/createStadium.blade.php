@@ -18,12 +18,12 @@
 
 
   <section id="sidebar">
-    <a href="#" class="brand">
+    <a href="/adminpanel" class="brand">
       <i class='bx bxs-smile'></i>
       <span class="text">AdminHub</span>
     </a>
     <ul class="side-menu top">
-      <li class="active">
+      <li>
         <a href="/create" onclick="showForm('iconic-moment-form')">
           <i class='bx bxs-dashboard'></i>
           <span class="text">Create Iconic Moments</span>
@@ -42,43 +42,21 @@
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="/listofIntlteams">
           <i class='bx bxs-message-dots'></i>
           <span class="text">International Teams</span>
         </a>
       </li>
+
+
       <li>
-        <a href="#">
-          <i class='bx bxs-message-dots'></i>
-          <span class="text">Create an IPL Team</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bxs-message-dots'></i>
-          <span class="text">IPL Teams</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bxs-message-dots'></i>
-          <span class="text">Create a BPL Team</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bxs-message-dots'></i>
-          <span class="text">BPL Teams</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
+        <a href="/createplayers">
           <i class='bx bxs-group'></i>
           <span class="text">Create a Player</span>
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="/storeplayers">
           <i class='bx bxs-user-detail'></i>
           <span class="text">Update a Player</span>
         </a>
@@ -229,7 +207,7 @@
             </div>
             <div class="form-group">
               <label for="featuretext">Enter a unique Feature</label>
-              <input type="text" id="featuretext" name="featuretext"  required value="{{old('featuretext')}}">
+              <input type="text" id="featuretext" name="featuretext" required value="{{old('featuretext')}}">
               @if($errors->has('featuretext'))
               <p>{{ $errors->first('featuretext') }}</p>
               @endif
