@@ -28,15 +28,8 @@
     </nav>
     <div class="logout">
       <i class='bx bx-log-out'></i>
-      <a href="#">LOGOUT</a>
+      <a href="/">LOGOUT</a>
     </div>
-    <div class="image">
-      <a href="">
-        <img src="image/logo_discover.jpg" alt="">
-      </a>
-
-    </div>
-
   </header>
 
   <section>
