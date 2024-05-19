@@ -145,6 +145,27 @@
               @endif
             </div>
             <div class="form-group">
+              <label for="facebook">Facebook Link: </label>
+              <input type="text" id="facebook_link" name="facebook_link"  value="{{old('facebook_link')}}">
+              @if ($errors->has('facebook_link'))
+              <p>{{ $errors->first('facebook_link') }}</p>
+              @endif
+            </div>
+            <div class="form-group">
+              <label for="twitter">Twitter Link: </label>
+              <input type="text" id="twitter_link" name="twitter_link"  value="{{old('twitter_link')}}">
+              @if ($errors->has('twitter_link'))
+              <p>{{ $errors->first('twitter_link') }}</p>
+              @endif
+            </div>
+            <div class="form-group">
+              <label for="instagram">Instagram Link: </label>
+              <input type="text" id="instagram_link" name="instagram_link"  value="{{old('instagram_link')}}">
+              @if ($errors->has('instagram_link'))
+              <p>{{ $errors->first('instagram_link') }}</p>
+              @endif
+            </div>  
+            <div class="form-group">
               <label for="test_matches">Test Matches:</label>
               <input type="number" id="test_matches" name="test_matches"  value="{{old('test_matches')}}">
               @if ($errors->has('test_matches'))
@@ -208,6 +229,7 @@
               <p>{{ $errors->first('t20_wickets') }}</p>
               @endif
             </div>
+
 
           </div>
 

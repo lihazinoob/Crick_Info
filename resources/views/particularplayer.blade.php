@@ -32,16 +32,25 @@
 
         <p>
           {{$player->country}}
+          
+          
         </p>
+        <p>
+        {{$player->playing_role}}
+
+        </p>
+        <p>          {{$player->batting_style}}
+          </p>
+          <p>{{$player->bowling_style}}</p>
 
         <div class="social-icons">
-          <a href="#">
+          <a href="{{$player->facebook}}">
             <i class="fab fa-facebook"></i>
           </a>
-          <a href="#">
+          <a href="{{$player->twitter}}">
             <i class="fab fa-twitter"></i>
           </a>
-          <a href="#">
+          <a href="{{$player->instagram}}">
             <i class="fab fa-instagram"></i>
           </a>
         </div>
@@ -64,9 +73,10 @@
         </div>
         <div class="text-data">
           <span class="name"> TEST MATCHES </span>
-          <span class="destination"> MATCHES:  </span>
-          <span class="destination"> RUN:  </span>
-          <span class="destination"> WICKETS:  </span>
+          <span class="destination"> MATCHES:{{$player->testmatches}} </span>
+          <span class="destination"> RUN: {{$player->testruns}}</span>
+          <span class="destination"> WICKETS: {{$player->testwickets}}</span>
+          
 
           
         </div>
@@ -78,9 +88,10 @@
         </div>
         <div class="text-data">
           <span class="name"> ODI MATCHES </span>
-          <span class="destination"> MATCHES:  </span>
-          <span class="destination"> RUN:  </span>
-          <span class="destination"> WICKETS:  </span>
+          <span class="destination"> MATCHES:{{$player->odimatches}} </span>
+          <span class="destination"> RUN: {{$player->odiruns}}</span>
+          <span class="destination"> WICKETS: {{$player->odiwickets}}</span>
+          
 
           
         </div>
@@ -92,10 +103,10 @@
         </div>
         <div class="text-data">
           <span class="name"> T20 MATCHES </span>
-          <span class="destination"> MATCHES:  </span>
-          <span class="destination"> RUN:  </span>
-          <span class="destination"> WICKETS:  </span>
-
+          <span class="destination"> MATCHES:{{$player->t20matches}} </span>
+          <span class="destination"> RUN: {{$player->t20runs}}</span>
+          <span class="destination"> WICKETS: {{$player->t20wickets}}</span>
+          
           
         </div>
       </div>

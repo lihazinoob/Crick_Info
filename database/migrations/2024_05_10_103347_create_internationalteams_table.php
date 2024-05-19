@@ -39,6 +39,9 @@ return new class extends Migration
             $table->integer('t20runs')->nullable();
             $table->integer('t20wickets')->nullable();
             $table->float('t20average')->nullable();
+            $table->string('facebook')->nullable();
+            $table->string('twitter')->nullable();
+            $table->string('instagram')->nullable();
             $table->string('country');
             // $table->string('International_Team');//to store the international team name
             $table->unsignedBigInteger('international_team_id');
