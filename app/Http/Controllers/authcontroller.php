@@ -64,4 +64,16 @@ class authcontroller extends Controller
     {
         return view('adminlogin');
     }
+
+    public function adminloginaction(Request $request)
+    {
+        if($request->email == 'admin@gmail.com' && $request->password == 'admin')
+        {
+            return redirect('/adminpanel');
+        }
+        else
+        {
+            return redirect('/adminlogin');
+        }
+    }
 }

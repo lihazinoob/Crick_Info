@@ -11,6 +11,7 @@ use App\Http\Controllers\admincontroller;
 Route::get('/', [authcontroller::class, 'authenticationprocess']);
 // This Route is for LOGIN Purpose
 Route::post('/loginaction', [authcontroller::class, 'loginaction']);
+Route::post('/adminloginaction', [authcontroller::class, 'adminloginaction']);
 
 // This Route is for REGISTER Purpose
 Route::post('/register', [authcontroller::class, 'registeruser']);

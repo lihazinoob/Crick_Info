@@ -14,7 +14,7 @@
   <h2>ADMIN LOGIN</h2>
   <div class="container" id="container">
     <div class="form-container sign-in-container">
-      <form action="/loginaction" method="POST">
+      <form action="/adminloginaction" method="POST">
         @csrf
         <h1>Sign in</h1>
 
@@ -40,5 +40,11 @@
     </div>
 
   </div>
+  <div class="adminmessageconatiner">
+      USER? 
+      <a href="/">LOGIN or SIGNUP</a>
+      
+  </div>
+
 
 </body>
