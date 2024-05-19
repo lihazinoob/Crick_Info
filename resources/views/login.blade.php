@@ -7,11 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{{ asset('cssfiles/login.css') }}">
   <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-  <title>User Login</title>
+  <title>ADMIN Login</title>
 </head>
 
 <body>
-  <h2>USER LOGIN & REGISTRATION</h2>
+  <h2>ADMIN LOGIN & REGISTRATION</h2>
   <div class="container" id="container">
     <div class="form-container sign-up-container">
       <form action="/register" method="POST">
@@ -33,7 +33,7 @@
 
         <input type="email" placeholder="Email" name="email" />
         <input type="password" placeholder="Password" name="password" />
-        <a href="#">Forgot your password?</a>
+        
         <button>Sign In</button>
       </form>
     </div>
@@ -54,8 +54,8 @@
     
   </div>
   <div class="adminmessageconatiner">
-      Admin? 
-      <a href="/adminlogin">LOGIN</a>
+      USER? 
+      <a href="/homepage">ENTER</a>
       
   </div>
 

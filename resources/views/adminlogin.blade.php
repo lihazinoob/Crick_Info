@@ -14,13 +14,13 @@
   <h2>ADMIN LOGIN</h2>
   <div class="container" id="container">
     <div class="form-container sign-in-container">
-      <form action="/adminloginaction" method="POST">
+      <form action="/loginaction" method="POST">
         @csrf
         <h1>Sign in</h1>
 
         <input type="email" placeholder="Email" name="email" />
         <input type="password" placeholder="Password" name="password" />
-        <a href="#">Forgot your password?</a>
+        
         <button>Sign In</button>
       </form>
     </div>

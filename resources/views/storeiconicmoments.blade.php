@@ -19,7 +19,7 @@
 
 
   <section id="sidebar">
-    <a href="#" class="brand">
+    <a href="/adminpanel" class="brand">
       <i class='bx bxs-smile'></i>
       <span class="text">AdminHub</span>
     </a>
@@ -30,7 +30,7 @@
           <span class="text">Create Iconic Moments</span>
         </a>
       </li>
-      <li class="active">
+      <li>
         <a href="/listoficonicmoments" onclick="showForm('list-of-iconic-moment-form')">
           <i class='bx bxs-shopping-bag-alt'></i>
           <span class="text">Iconic Moments</span>
@@ -43,38 +43,15 @@
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="/listofIntlteams">
           <i class='bx bxs-message-dots'></i>
           <span class="text">International Teams</span>
         </a>
       </li>
+
+
       <li>
-        <a href="#">
-          <i class='bx bxs-message-dots'></i>
-          <span class="text">Create an IPL Team</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bxs-message-dots'></i>
-          <span class="text">IPL Teams</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bxs-message-dots'></i>
-          <span class="text">Create a BPL Team</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bxs-message-dots'></i>
-          <span class="text">BPL Teams</span>
-        </a>
-      </li>
-      
-      <li>
-        <a href="#">
+        <a href="createplayers">
           <i class='bx bxs-group'></i>
           <span class="text">Create a Player</span>
         </a>
@@ -92,16 +69,17 @@
         </a>
       </li>
       <li>
-        <a href="">
+        <a href="/listofstadiums">
           <i class='bx bxs-user-detail'></i>
           <span class="text">Stadiums</span>
         </a>
       </li>
+
     </ul>
     <ul class="side-menu">
 
       <li>
-        <a href="#" class="logout">
+        <a href="/logout" class="logout">
           <i class='bx bxs-log-out-circle'></i>
           <span class="text">Logout</span>
         </a>

@@ -26,10 +26,11 @@ class authcontroller extends Controller
         if (auth()->attempt($formFields)) {
             $request->session()->regenerate();
 
-            return redirect('/homepage')->with('message', 'You are now logged in');
+            return redirect('/adminpanel')->with('message', 'You are now logged in');
         }
-
-        return back()->withErrors(['email' => 'Invalid Credentials'])->onlyInput('email');
+        
+        else
+            return back()->withErrors(['email' => 'Invalid Credentials'])->onlyInput('email');
     }
     public function registeruser(Request $request)
     {
@@ -65,15 +66,5 @@ class authcontroller extends Controller
         return view('adminlogin');
     }
 
-    public function adminloginaction(Request $request)
-    {
-        if($request->email == 'admin@gmail.com' && $request->password == 'admin')
-        {
-            return redirect('/adminpanel');
-        }
-        else
-        {
-            return redirect('/adminlogin');
-        }
-    }
+    
 }

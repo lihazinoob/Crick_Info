@@ -11,7 +11,7 @@ use App\Http\Controllers\admincontroller;
 Route::get('/', [authcontroller::class, 'authenticationprocess']);
 // This Route is for LOGIN Purpose
 Route::post('/loginaction', [authcontroller::class, 'loginaction']);
-Route::post('/adminloginaction', [authcontroller::class, 'adminloginaction']);
+
 
 // This Route is for REGISTER Purpose
 Route::post('/register', [authcontroller::class, 'registeruser']);
@@ -21,7 +21,7 @@ Route::get('/logout', function () {
     auth()->logout();
     request()->session()->invalidate();
     request()->session()->regenerateToken();
-    return redirect('/login');
+    return redirect('/')->with('message', 'You are now logged out');
 });
 
 Route::get('/homepage', [iconicmomentsController::class, 'showtheiconicmoments']);
@@ -69,13 +69,13 @@ Route::get('/particularIntlteam/{id}', [MainController::class, 'showparticularIn
 Route::get('/stadiums', [MainController::class, 'showstadiumlistinuserpanel']);
 
 Route::get('/particularstadium/{id}', [MainController::class, 'showparticularstadium']);
-
+Route::get('/adminlogin',[authcontroller::class,'adminlogin']);
 
 Route::middleware('auth')->group(
     function () {
 
         // This is the route for showing the admin panel.
-        Route::get('/adminlogin',[authcontroller::class,'adminlogin']);
+        
         Route::get('/adminpanel', [MainController::class, 'showadminpanel']);
         // This route is for showing the list of iconic moments in admin panel.
         Route::get('/listoficonicmoments', [MainController::class, 'showtheiconicmomentsinadminpanel']);

@@ -42,8 +42,10 @@
           <span class="text">International Teams</span>
         </a>
       </li>
-      <li class="active">
-        <a href="/createplayers">
+
+
+      <li>
+        <a href="createplayers">
           <i class='bx bxs-group'></i>
           <span class="text">Create a Player</span>
         </a>

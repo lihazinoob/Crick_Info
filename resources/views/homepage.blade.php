@@ -24,20 +24,12 @@
         <nav class="navbar">
             <a href="/homepage" class="active"> Iconic Moments </a>
             <a href="/discover"> Discover </a>
-            <a href="/"> Your List </a>
-
         </nav>
         <div class="logout">
             <i class='bx bx-log-out'></i>
-            <a href="#">LOGOUT</a>
+            <a href="/logout">LOGOUT</a>
         </div>
-        <div class="image">
-            <a href="">
-                <img src="image/logo_discover.jpg" alt="">
-            </a>
-
-        </div>
-
+        
     </header>
 
     <!-- carousel -->
@@ -74,14 +66,7 @@
             @foreach($iconicmoments as $iconicmoment)
             <div class="item">
                 <img src="{{ asset('iconicmoments/'.$iconicmoment->image) }}">
-                <div class="content">
-                    <div class="title">{{$iconicmoment->title}}</div>
-
-                    <div class="des">
-
-                        {{$iconicmoment->author}}
-                    </div>
-                </div>
+                
             </div>
             @endforeach
 
@@ -92,7 +77,8 @@
 
         <div class="arrows">
             <button id="prev">
-                << /button>
+                < 
+            </button>
                     <button id="next">></button>
         </div>
         <!-- time running -->
